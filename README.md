@@ -8,3 +8,6 @@ https://store.steampowered.com/app/3046230/Season_Island/
 
 Check it out on Itch.io!
 https://terebiki.itch.io/season-island
+
+Uses crystallizedsparkle's decompiler script.
+https://github.com/crystallizedsparkle/Gamemaker-LTS-Decompiler
