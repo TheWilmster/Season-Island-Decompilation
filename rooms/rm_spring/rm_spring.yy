@@ -27,8 +27,8 @@
   ],
   "name":"rm_spring",
   "parent":{
-    "name":"Rooms",
-    "path":"folders/Rooms.yy",
+    "name":"Outside",
+    "path":"folders/Rooms/Chapter 1/Outside.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

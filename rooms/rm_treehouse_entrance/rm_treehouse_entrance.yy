@@ -29,8 +29,8 @@
   ],
   "name":"rm_treehouse_entrance",
   "parent":{
-    "name":"Rooms",
-    "path":"folders/Rooms.yy",
+    "name":"Treehouse",
+    "path":"folders/Rooms/Chapter 1/Treehouse.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

@@ -51,8 +51,8 @@
   ],
   "name":"rm_treehouse",
   "parent":{
-    "name":"Rooms",
-    "path":"folders/Rooms.yy",
+    "name":"Treehouse",
+    "path":"folders/Rooms/Chapter 1/Treehouse.yy",
   },
   "parentRoom":null,
   "physicsSettings":{
