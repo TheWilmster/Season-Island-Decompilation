@@ -11,3 +11,5 @@ https://terebiki.itch.io/season-island
 
 Uses crystallizedsparkle's decompiler script.
 https://github.com/crystallizedsparkle/Gamemaker-LTS-Decompiler
+
+Pull requests and Issues are appreciated, so please let me know if there is an issue.
