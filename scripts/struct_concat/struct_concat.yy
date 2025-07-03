@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"struct_concat",
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "name":"Structs",
+    "path":"folders/Scripts/Utilities/Data Utilties/Structs.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

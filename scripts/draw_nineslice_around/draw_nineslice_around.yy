@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"draw_nineslice_around",
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "name":"Visuals, Animation, and Effects",
+    "path":"folders/Scripts/Visuals, Animation, and Effects.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

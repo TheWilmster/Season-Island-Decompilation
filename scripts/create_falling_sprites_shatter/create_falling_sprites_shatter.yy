@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"create_falling_sprites_shatter",
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "name":"Falling Sprites",
+    "path":"folders/Scripts/Visuals, Animation, and Effects/Falling Sprites.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"index_inside_array",
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "name":"Arrays",
+    "path":"folders/Scripts/Utilities/Data Utilties/Arrays.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

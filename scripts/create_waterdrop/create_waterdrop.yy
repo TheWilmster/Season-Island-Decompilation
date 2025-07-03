@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"create_waterdrop",
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "name":"Liquid",
+    "path":"folders/Scripts/Visuals, Animation, and Effects/Liquid.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

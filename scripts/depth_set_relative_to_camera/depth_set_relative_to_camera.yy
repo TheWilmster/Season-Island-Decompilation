@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"depth_set_relative_to_camera",
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "name":"# RPG Era (Old)",
+    "path":"folders/Scripts/# RPG Era (Old).yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

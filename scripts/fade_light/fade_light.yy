@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"fade_light",
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "name":"Fading",
+    "path":"folders/Scripts/Visuals, Animation, and Effects/Fading.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

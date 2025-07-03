@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"value_change_linear",
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "name":"Math Utilities",
+    "path":"folders/Scripts/Utilities/Math Utilities.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

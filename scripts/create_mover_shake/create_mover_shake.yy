@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"create_mover_shake",
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "name":"Movers",
+    "path":"folders/Scripts/Visuals, Animation, and Effects/Movers.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

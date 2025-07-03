@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"colors_are_analogous",
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "name":"Misc. Utilities",
+    "path":"folders/Scripts/Utilities/Misc. Utilities.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

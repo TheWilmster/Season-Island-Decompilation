@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"scr_decomp",
   "parent":{
-    "name":"Decompile Assets",
-    "path":"folders/Scripts/Decompile Assets.yy",
+    "name":"# Decompilation Assets",
+    "path":"folders/Scripts/# Decompilation Assets.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

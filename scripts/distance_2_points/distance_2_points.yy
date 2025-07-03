@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"distance_2_points",
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "name":"Math Utilities",
+    "path":"folders/Scripts/Utilities/Math Utilities.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

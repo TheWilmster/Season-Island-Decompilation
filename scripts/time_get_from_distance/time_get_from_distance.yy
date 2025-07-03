@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"time_get_from_distance",
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "name":"# RPG Era (Old)",
+    "path":"folders/Scripts/# RPG Era (Old).yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

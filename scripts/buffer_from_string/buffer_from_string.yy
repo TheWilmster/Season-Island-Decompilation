@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"buffer_from_string",
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "name":"Misc. Utilities",
+    "path":"folders/Scripts/Utilities/Misc. Utilities.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

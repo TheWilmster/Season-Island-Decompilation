@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"sfx_play",
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "name":"Sound",
+    "path":"folders/Scripts/Systems/Sound.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

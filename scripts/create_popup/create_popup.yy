@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"create_popup",
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "name":"UI Elements",
+    "path":"folders/Scripts/UI Elements.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"Viewer3D",
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "name":"3D",
+    "path":"folders/Scripts/Visuals, Animation, and Effects/3D.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"event_flag_get",
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "name":"Events",
+    "path":"folders/Scripts/Events.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

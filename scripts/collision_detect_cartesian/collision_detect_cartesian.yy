@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"collision_detect_cartesian",
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "name":"# RPG Era (Old)",
+    "path":"folders/Scripts/# RPG Era (Old).yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",
