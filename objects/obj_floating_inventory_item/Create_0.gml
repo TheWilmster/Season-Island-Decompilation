@@ -1,0 +1,9 @@
+var item = obj_data.get_item(item_id);
+sprite_index = item.sprite_index;
+x -= (sprite_width / 2);
+y -= (sprite_height / 2);
+var empty_inventory_slot = global.inventory.find_first_empty_slot();
+var inventory_slot_instance = obj_inventory.get_inventory_slot_instance_at_index(empty_inventory_slot);
+target_x = (inventory_slot_instance.x + (inventory_slot_instance.sprite_width / 2)) - (sprite_width / 2);
+target_y = (inventory_slot_instance.y + (inventory_slot_instance.sprite_height / 2)) - (sprite_height / 2);
+lerp_amount = 0.2;

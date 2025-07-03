@@ -1,0 +1,11 @@
+var is_on_right_side = random(1) < 0.5;
+var spring_sprite_width = obj_talksprite_spring.sprite_width;
+var spring_offset_x = 110;
+var sweat_x = x + (is_on_right_side ? (spring_sprite_width - spring_offset_x) : spring_offset_x);
+var sweat_y = y + 60;
+var sweat_xspd_abs = 1 + random(1);
+var sweat_xspd = is_on_right_side ? sweat_xspd_abs : -sweat_xspd_abs;
+var sweat_yspd = -(3 + random(1));
+var sweat_w = 0.2;
+var sweat_xscale = is_on_right_side ? -1 : 1;
+create_falling_sprite(sprite_index, image_index, sweat_x, sweat_y, depth - 2, sweat_xspd, sweat_yspd, sweat_w, sweat_xscale);

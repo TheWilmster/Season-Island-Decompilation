@@ -1,0 +1,52 @@
+event_inherited();
+obj_menu_main.set_visibility(false);
+global.is_game_paused = true;
+
+get_width = function()
+{
+	return ((array_length(child_nodes) - 1) * child_nodes[0].get_width()) + ((array_length(child_nodes) - 2) * button_spacing);
+};
+
+get_height = function()
+{
+	var sum = 0;
+	for (var i = 0; i < array_length(child_nodes); i++)
+		sum += child_nodes[i].get_height();
+	sum += ((array_length(child_nodes) - 1) * button_spacing);
+	return sum;
+};
+
+button_spacing = 12;
+array_push(child_nodes, instance_create_depth(0, 0, Depth.ButtonUI, obj_clickable_button_move_room, 
+{
+	target_room: target_room
+}));
+array_push(child_nodes, instance_create_depth(0, 0, Depth.ButtonUI, obj_clickable_button_close_menu));
+if (array_length(child_nodes) == 1)
+{
+	with (child_nodes[0])
+	{
+		x = 320 - (get_width() / 2);
+		y = 180 - (get_height() / 2);
+	}
+	exit;
+}
+var cursor_x = 320;
+var total_width = get_width();
+for (var i = 0; i < (array_length(child_nodes) - 1); i++)
+{
+	with (child_nodes[i])
+	{
+		y = 180 - get_height();
+		x = cursor_x - (total_width / 2);
+		cursor_x += get_width();
+	}
+	cursor_x += button_spacing;
+}
+var spacing = button_spacing;
+var first_button = child_nodes[0];
+with (array_get_last(child_nodes))
+{
+	x = 320 - (get_width() / 2);
+	y = first_button.y + first_button.get_height() + spacing;
+}

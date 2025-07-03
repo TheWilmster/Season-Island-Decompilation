@@ -1,0 +1,12 @@
+{
+  "$GMShader":"",
+  "%Name":"sh_outline_red",
+  "name":"sh_outline_red",
+  "parent":{
+    "name":"Shaders",
+    "path":"folders/Shaders.yy",
+  },
+  "resourceType":"GMShader",
+  "resourceVersion":"2.0",
+  "type":1,
+}

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"virtual_method",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"virtual_method",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

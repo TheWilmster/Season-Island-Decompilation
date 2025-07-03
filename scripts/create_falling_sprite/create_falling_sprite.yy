@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"create_falling_sprite",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"create_falling_sprite",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

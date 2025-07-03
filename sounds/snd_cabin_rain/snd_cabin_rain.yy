@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_cabin_rain",
+  "audioGroupId":{
+    "name":"audiogroup_music",
+    "path":"audiogroups/audiogroup_music",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":8.0,
+  "name":"snd_cabin_rain",
+  "parent":{
+    "name":"Music",
+    "path":"folders/Sounds/Music.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_cabin_rain.ogg",
+  "type":0,
+  "volume":1.0,
+}

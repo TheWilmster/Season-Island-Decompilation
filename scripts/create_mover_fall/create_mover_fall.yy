@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"create_mover_fall",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"create_mover_fall",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

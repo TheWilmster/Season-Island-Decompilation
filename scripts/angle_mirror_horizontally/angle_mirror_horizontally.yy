@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"angle_mirror_horizontally",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"angle_mirror_horizontally",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

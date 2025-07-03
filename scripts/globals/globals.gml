@@ -1,0 +1,13 @@
+global.you_re_happy_and_you_know_it = false;
+global.inventory = new Inventory(7);
+global.is_game_paused = false;
+global.font_textbox = __scribble_font_add_sprite(spr_font_textbox, 32, true, 1);
+global.font_title = __scribble_font_add_sprite(spr_font_title, 32, true, 1);
+scribble_font_bake_outline_8dir(font_get_name(fnt_pixel_operator_hbsc), "fnt_pixel_operator_hbsc_outline_8dir", 0, false);
+scribble_font_bake_outline_8dir(font_get_name(fnt_pixel_operator_8), "fnt_pixel_operator_8_outline_8dir", 0, false);
+scribble_font_bake_shadow(font_get_name(global.font_textbox), "fnt_textbox_shadow", 3, 3, 0, 1, 0, false);
+audio_group_load(audiogroup_sfx);
+audio_group_load(audiogroup_music);
+global.event_flags = array_create(Event.ListSize, false);
+global.can_click = true;
+global.chapter = 0;

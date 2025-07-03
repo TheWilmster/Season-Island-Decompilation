@@ -1,0 +1,3605 @@
+#__PrivCrochet_version:1
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 17880,11160
+__PrivCrochet_tags: 
+title: newton spring shop
+---
+<<declare $newton_spring_shop_visited_girl = false>>
+<<talkspriteFadeIn("newton")>>
+Newton: Need somethin?
+-> Nope
+    Newton: Then don't bother me.
+    <<talkspriteFadeOut()>>
+    <<stop>>
+-> The shop
+    <<hop newton spring shop shop>>
+-> The girl
+    <<set $newton_spring_shop_visited_girl = true>>
+    <<hop newton spring shop spring>>
+-> The girl's dad <<if $newton_spring_shop_visited_girl == true>>
+    <<hop newton spring shop dad>>
+<<jump newton spring shop>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 26280,11160
+__PrivCrochet_tags: 
+title: spring date
+---
+<<roomMusicStop()>>
+<<springDateStart()>>
+<<music("snd_spring_date")>>
+Spring: Now, my prince, how's the tea?
+Spike: Incredibly hot haha...
+Spring: [emote,2]You and your tea have something in common then~
+Spike: (Was that flirting? That was flirting, right? What do I say??)
+-> Comment on the aroma
+    Spike: Heh, yeah. Me and tea are totally the same!
+    Spring: Is that so?
+    Spike: We're smooth n' soothing, but bitter if you don't shower us in sweets.
+    <<springDateFillMeter(5)>>
+    Spring: [spring_anime,1][emote,1]My! I never thought of it that way, Spike~
+-> Play dumb
+    Spike: Oh! T- [delay,100][camshake]Thanks! I love it boiling, scorching even.
+    <<springDateFillMeter(-10)>>
+    Spring: [emote,0][spring_anime,3](Well, it appears that flew over his beautiful head.)
+-> I know I'm hot!
+    Spike: Heh, glad ye noticed!
+    Spike: I'm a totally handsome lad when I wanna be.
+    Spring: Why, "handsome" isn't quite it.
+    <<springDateFillMeter(15)>>
+    Spring: You're [delay,100][camshake][emote,3]"absolutely smashin", my guy~
+    Spike: W- [camshake]woah! Where'd you learn that from?!
+    Spring: [emote,2][spring_anime,0]It's written all over your face, handsome~
+    Spike: [camshake]Woah!!
+Spring: [emote,0][spring_anime_stop]So, you've been wondering around here for quite some time now.
+Spring: But I've never asked...well...about [delay,200][emote,1][spring_anime,1]you.
+Spring: Tell me...what do you do, err, when you aren't visiting my glorious kingdom?
+Spike: (What do I do?! I dunno, what do YOU do, pal?)
+-> Play video games
+    Spike: I guide a powerful warrior through dangerous plains.
+    Spring: [emote,1]Oh my!~
+    Spike: My job is to command it to slay deadly beasts.
+    Spike: Every action is meticulously calculated!
+    Spike: But ever so often, I seek wisdom from the ancient masters, for I am not one.
+    Spring: [emote,1]You sound very, very talented at what you do, my prince...
+    Spike: I'm not too bad at it myself, heh.
+    <<springDateFillMeter(-15)>>
+    Spring: [emote,4][music_pitch,.8][spring_anime,2]Psh, videogames. I do not vouch for those who partake in this form of entertainment.
+    Spring: [emote,0]Spike, how about you touch some grass?
+    Spike: Yeah I...uh...
+    Spring: [emote,1]You will? Thank you!
+    Spike: I mean[continue]
+    Spring: [spring_anime,1]You will touch grass. With me. We will touch grass together, romantically.
+-> Rockin'
+    Spike: I am a master at the electric guitar. It's my ultimate weapon.
+    Spike: And I sing songs about some knight in shining armor, rising from the ice, all mighty-like.
+    Spike: Wielding a huge axe n' stuff.
+    Spike: Me and my crew may not be famous yet, but one of those days...
+    Spike: [camshake]DISTORTION SPIKE YEAAAAAAAHHHHHH!!!!
+    <<springDateFillMeter(30)>>
+    Spring: [emote,2][spring_anime,1]So you must be some sort of bard, correct?
+    Spike: Yeah, well, a REALLY good bard!!
+    Spring: [emote,1]I am not the best at musical instruments, see, but my singing voice makes up for it!
+    <<musicPitch(1.02)>>
+    <<springDateFillMeter(-2)>>
+    Spring: [emote,0]It's what keeps my creatures motivated despite...err...
+    <<musicPitch(1.1)>>
+    <<springDateFillMeter(-2)>>
+    Spring: There's nothing we can do, so...we..
+    <<musicPitch(1.2)>>
+    <<springDateFillMeter(-2)>>
+    Spring: [emote,5]W- [delay,100]well we[continue]
+    <<musicPitch(1.3)>>
+    <<springDateFillMeter(-2)>>
+    Spring: We uh...[continue]
+    <<musicPitch(1.5)>>
+    <<springDateFillMeter(-2)>>
+    Spring: [emote,7][spring_anime,4][shake]We might as well enjoy our last moments!! R- [delay, 200][camshake]Right?!
+    <<delaySeconds(1)>>
+    <<musicPitch(1)>>
+    Spring: [emote,0][spring_anime,0]Right. Yes, I quite enjoy music.
+-> Sleep all day
+    Spike: I often visit a strange non-material world composed of thoughts.
+    Spike: It's a dangerous world where anything can manifest into existence.
+    Spike: My adventures are kept documented in what's called a-
+    Spring: [emote,1]A dream journal!
+    Spike: Yeah I- well- it's really cool trust me!
+    <<springDateFillMeter(10)>>
+    Spring: [emote,2][spring_anime,1]I bet you look cute when you sleep!~
+    Spike: *gulp!*
+    Spring: [emote,2]Well, you're not denying it, are you?
+    Spike: (Maybe if I drink this tea faster, she won't notice how creeped out I am!)
+<<springAnimeStop()>>
+<<emote(0)>>
+Spike: [emote,0][music_pitch,1]What about you? I mean- what do you do here?
+Spike: Takin' care of a kingdom sounds like a chore!
+Spring: [emote,1]Ah, nothing I can't get used to!
+Spring: [emote,0]It's like taking care of a garden, really.
+Spring: [emote,4][spring_anime,2]A garden infested with [c_yellow]little moles[/c], that's for certain.
+Spring: [emote,0]It just...it's gotten [c_yellow]a little difficult[/c], I must admit.
+Spring: [emote,1]But...what can I do? I'm a guardian! It's...[c_yellow]my responsibility[/c]. I cannot escape it, haha.
+Spike: (The way that text flashed...Do you think we should be askin some questions?)
+-> Difficult?
+    Spike: Whatcha mean by "difficult"?
+    Spring: [emote,1]Ah, well, you see...
+    Spring: [emote,0]It used to be...well...I used to work with my sister...
+    Spring: But then, [c_yellow]something[/c] happened and...
+    Spring: [emote,0]Do you think she hates me?
+    -> Yes
+        <<springDateFillMeter(10)>>
+        Spike: Absolutely.
+        Spring: [emote,7]Heh, well I hate her TOO! What a loser! Sticking to screens all the time!
+        Spring: [shake][spring_anime,4]Her and her stupid...tech...
+        Spike: W- wait no! [delay,100]That's not what I meant- [delay,200][continue]
+        Spring: [emote,2][spring_anime_stop]Oh yeah? Well I [shake]DO mean it!
+        Spring: Watch as I mock her very existence to oblivion!~
+        <<talkspriteFadeOut()>>
+        <<springDateFillMeter(-200)>>
+        Spring: [shake][camshake]GWAHHHH SUMMER I MISS YOU SO MUCH...!!
+        <<springDateFillMeter(-200)>>
+        Spring: I EVEN KEPT YOUR TEAPOT!! THE ELEPHANT ONE..!!
+        <<springDateFillMeter(-200)>>
+        Spring: [shake]I'M SORRY I THOUGHT I COULD KEEP YOU HAPPY THAT WAY....
+        <<springDateFillMeter(-200)>>
+        Spring: I DIDN'T MEAN TO....
+        <<springDateFillMeter(-200)>>
+        Spring: [shake][camshake]I DIDN'T MEAN TO HURT YOU SIS.....GWAHHHH..!!!!!!!
+        <<talkspriteFadeIn("spring")>>
+        Spike: I'm terribly sorry to hear, Spring.
+        Spike: I'm sure she misses you as much as you miss her!
+        <<springDateFillMeter(1000)>>
+        Spring: [shake]*sniffle*
+        <<springDateFillMeter(1)>>
+        Spring: [spring_anime,1]T...thank you, Spike. That means a lot to me.
+    -> No
+        Spike: That's nonsense!
+        Spring: ...
+        Spring: You're right, you're right...
+        Spring: "Hate" isn't quite it.
+        Spring: [emote,5][shake]She must...utterly despise my very...existence...*sob*...
+        Spike: Hey hey now! I'm sure that's not it! C'mon!
+        Spring: But...how can you be so sure?
+        Spring: I dunno[emote,7]
+        Spring: ...[spring_anime,3]Right.
+    -> She loves you
+        Spike: She loves you, Spring.
+        Spring: [emote,0]...She...
+        Spring: [emote,4]...Do you...
+        <<springDateFillMeter(10)>>
+        Spring: [shake]*sniffle*
+        Spring: [emote,0][spring_anime,0]But...do you love me?
+        Spring: N- [delay,200][camshake][emote,2]no, don't answer that...I prefer the suspense...~
+-> Moles?
+    Spike: Moles? Huh? Haven't seen any!
+    Spring: [emote,4]Oh, you will see them, alright.
+    Spring: They're abundant in...that one...place...
+    Spring: [emote,1][spring_anime,4]B- but you don't need to worry about that!
+    Spring: All they do is eat dark crystals and be annoying!
+    Spring: [emote,5]That...that kind of dark crystal...the one that makes me dizzy...
+    Spring: [emote,7][spring_anime,3]The thing that...this little furball asked me for...
+    Spring: [emote,0][spring_anime_stop]How did it get here anyway..?
+    Spike: Beats me!
+    Spring: [emote,1]Beats me!~
+-> Responsibility?
+    Spike: What were you saying about bein a guardian?
+    Spring: [emote,0]See, as a guardian, I must fulfill a purpose.
+    Spring: If I don't, then...my kingdom...it collapses.
+    Spring: [emote,4]Alas it seems to be...breaking, despite all of my hardwork.
+    Spring: [emote,0]Who am I kidding...I've grown lazy...I just...
+    Spring: [emote,5]One moment!
+    <<talkspriteFadeOut()>>
+    Spring: [shake]SSSSSSSSSSSIIIIIIIIIIIIIIIIIIII[continue]
+    Spring: [shake]IIIIIIIIIIIIIIIIIIIIIIIII[continue]
+    Spring: [shake]IIIIIP[continue]
+    <<talkspriteFadeIn("spring")>>
+    Spring: Refreshing tea!
+    Spring: What were we talking about again?
+    Spike: Tea.
+    Spring: [emote,6]I love tea yum yum.
+<<springAnimeStop()>>
+<<emote(0)>>
+Spring: But when I'm not taking care of my kingdom, I usually partake in several hobbies.
+Spring: Meditating, painting, gardening...[emote,1]Small things of the sort, haha.
+Spike: That's great! I too uh...partake in uh...
+-> Meditating
+    Spike: Meditating.
+    <<springDateFillMeter(10)>>
+    Spring: [emote,0][spring_anime,1]Tell me more...~
+    Spike: Well, there's this cabin I often visit, and...
+    Spike: I kinda just sit there. Thinkin bout how I ended up in this situation.
+    Spring: [emote,7][spring_anime_stop]W- what situation? You're getting me worried..!
+    Spike: [camshake]Oh no! [emote,0]It's nothin!
+    Spike: It's just...you know.
+    Spring: Know what?
+    Spike: Siblings!
+    Spring: [spring_anime,3]Ah, that I do indeed know.
+    Spring: [emote,1][spring_anime,0]You and I aren't so different, are we, Spike?
+    Spike: Maybe not!
+-> Painting
+    Spike: I paint too! But only with pencils. I only draw the sketch under the painting. [delay,200]On sheets of paper.
+    Spring: [emote,2]Just say you "draw", silly~
+    <<springDateFillMeter(20)>>
+    <<emote(1)>>
+    Spike: [camshake]Yeah! I draw!
+    Spike: Drew myself as a dog, once! Like, a human-dog.
+    Spike: It's silly because it's not real, but I like drawin that human-dog anyway!
+    Spring: [emote,7]Whaat? Human-dogs are a thing, you know?
+    Spike: Oh- ohhh right, yeah, I forgot. This place is uh, magical.
+    Spring: [spring_anime,1][emote,3][camshake]You wanna turn into a human-puppy, Spike?
+    Spike: [camshake]DO I?!
+    Spring: [spring_anime,3][emote,1]Just kidding...I can't do THAT sort of magic!
+    Spike: (Aw, man!)
+<<springAnimeStop()>>
+<<emote(0)>>
+Spring: Aside from that...Is there anything you...
+Spring: Well, you see, I was wondering if you had any special interests.
+Spring: Little things of the daily that fill you with whimsy and joy!~
+Spike: Hmm...well I...
+-> Little fuzzy animals
+    Spike: I like little fuzzy animals! I think they're cute.
+    <<springDateFillMeter(30)>>
+    Spring: [emote,1]Aww!~ I do too!
+    <<springDateFillMeter(-30)>>
+    Spring: [emote,7][camshake][spring_anime,2]I JUST WANT TO SQUEEZE THEM!!
+    <<springDateFillMeter(-30)>>
+    Spring: AND [camshake]BANISH THEM FROM MY KINGDOM [camshake]FOREVER!!
+    Spike: ...
+    Spike: Yeah, that too.
+-> Girls named "Spring"
+    Spike: Girls named, by pure coincidence, "Samantha".
+    Spring: [emote,3]You're in [camshake]LUCK, lovely~
+    <<springDateFillMeter(10)>>
+    Spring: It so happens that my name- [delay,200][spring_anime,0]ALMOST sounds like "Samantha"!~
+    Spike: Woah! That's awesome!
+    Spring: [emote,2]Impressed yet?
+    Spike: Yes! Very!
+    Spike: No, not at all.
+    <<springDateFillMeter(-2)>>
+    Spring: [spring_anime,4](What am I doing wrong?!)
+-> Cats
+    Spike: Meow.
+    Spring: Meow.
+    Spike: Meow.
+    Spring: Meow.
+    Spike: Meow.
+    Spring: Meow.
+    Spike: Meow.
+    Spring: [emote,7]Meow?
+    Spike: [emote,0]Sorry, did you say something?
+    Spring: No, but it sounded like a cat.
+    Spike: What did?
+    Spring: I'm not sure.
+    Spike: That was weird.
+    Spring: [emote,7]Yeah. I didn't like that.
+    Spike: Me neither.
+    Spring: Yeah.
+    <<springDateFillMeter(15)>>
+    Spring: [spring_anime,0][emote,2]I'm glad we agree on such a basic argument.
+<<springAnimeStop()>>
+<<emote(0)>>
+<<musicFadeOut()>>
+<<springDateStop()>>
+<<if springDateGetScore() >= $springDateGoodScore>>
+<<hop spring date result good>>
+<<elseif springDateGetScore() >= $springDateBadScore>>
+<<hop spring date result default>>
+<<else>>
+<<hop spring date result bad>>
+<<endif>>
+<<jump spring date newton>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 27120,11160
+__PrivCrochet_tags: 
+title: spring date result bad
+---
+Spring: ...
+Spring: Well, appearances can sometimes be deceiving. 
+Spike: Huh?
+Spring: Maybe...[delay,200][emote,7][spring_anime,3]maybe you're more my sister's type, Spike. 
+Spring: [emote,1]In any case, it seems I had a wrong image of you.
+Spike: I get that often.
+Spring: ...[emote,7]right.
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 27400,11160
+__PrivCrochet_tags: 
+title: spring date result default
+---
+Spring: Well I have to admit.. you are quite the charmer.. 
+Spike: I try my best. 
+Spring: [emote,1]But...
+Spike: ("But"?!)
+Spring: [emote,0]It truly pains me to tell you this...
+Spring: [spring_anime,3]I just don't think we could work out as well as I thought we could. Haha.
+Spring: [emote,1]We could still be friends at least!
+[c_red]You just got [delay,150][camshake,4,4,.2][sfx,snd_punch]FRIENDZONED[/c]
+Spike: [shake][camshake]NOOOOOOOOOO!!!!
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 27680,11160
+__PrivCrochet_tags: 
+title: spring date result good
+---
+Spring: [emote,6][spring_anime,0]Oh how enchanting you are!~ [spr_music_note]
+Spring: [emote,2]If it weren't for the current circumstances, I'd organize a marriage ceremony for us! 
+Spring: Think you're gonna have the time for more of this, [delay,150][emote,3][camshake]big boy?
+Spring: [emote,2]Maybe even something [c_fuchsia]a little more intimate[/c]?~
+Spike: (I'm gonna have a heart attack.)
+Spike: (I've never made it THIS far before! What do I say?!)
+Spike: You're ugly!
+Spring: [spring_anime,1][emote,0]When compared to you, I might as well be!~
+Spike: U- undo! Undo! Crt-Z!! Please!
+Spring: [spring_anime_stop][emote,3]You can't undo who you are.
+Spike: [shake]NOOOOOOOOOO!!!!!!
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 28240,11160
+__PrivCrochet_tags: 
+title: spring shade plant
+---
+<<if visitedSelf() == 1>>
+Spike: Hey! This plant could make for some pretty good shade!
+Spike: Too bad it's taken by these flowers.
+Spike: Wonder if they're okay.
+<<elseif visitedSelf() == 2>>
+Spike: Flowers need sunlight to survive, right?
+-> Yes
+    Spike: Alright, just checkin.
+    Spike: I forget these things easily.
+-> No
+    Spike: Huh. I'd have sworn.
+    Spike: Ah well. Plants, I guess.
+<<else>>
+Spike: Looks neat.
+<<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1080,11440
+__PrivCrochet_tags: 
+title: spring shade plant cut
+---
+Spike: Snip snip!
+Spike: Hey! Got this [create_sprite_item,spr_item_wooden_branch_y]oddly-shapped branch here.
+Spike: Let's keep it!
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 26840,11440
+__PrivCrochet_tags: 
+title: well
+---
+<<if visitedSelf() == 1>>
+Spike: Looks beautiful, don't it.
+<<elseif visitedSelf() == 2>>
+Spike: Always wondered if there treasures hidden at the bottom of these things.
+Spike: Never took myself seriously when I thought about it.
+<<elseif visitedSelf() == 3>>
+Spike: Yep.
+<<else>>
+Spike: Why're you still showin me this?
+<<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 27680,11440
+__PrivCrochet_tags: 
+title: well watering can already full
+---
+Spike: That watering can looks full enough to me!
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 9200,11160
+__PrivCrochet_tags: 
+title: cherug wrong item
+---
+Cherug: Ah! Let me take a looksie...
+Cherug: ...
+Cherug: Nope! I have no idea what to do with it! Sorry!
+Spike: It's alright.
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 5560,11160
+__PrivCrochet_tags: 
+title: cherug
+---
+<<if visitedSelf() == 1>>
+Spike: Hiya.
+Cherug: Helloooo! I'm a cherug!
+Spike: So like, some sort of bug?
+Cherug: If you need anything fixed or glued, I'm your slug!
+Cherug: It's crazy what you can do with excessive saliva!
+Spike: I wouldn't know!
+Cherug: My saliva is like glue! That's what makes it so useful.
+Spike: Alright, we'll be coming to you if anythin needs [c_yellow]fixing[/c] or [c_yellow]gluing[/c].
+<<elseif visitedSelf() == 2>>
+Spike: Why ain't I seeing you bugs use your wings?
+Cherug: They're frozen!
+Cherug: My wings are frozen to my body!
+Cherug: I can't fly any more...
+Cherug: Can you breathe closer to my wings to warm them up?
+Spike: I don't think that's gonna help, really.
+Cherug: WHAT!! Bummer!!
+Spike: Sorry.
+Spike: On second thought, I don't think I wanna see flyin snails anyway.
+<<else>>
+Cherug: Hi! Did you find something broken?
+Spike: Nope, nothin. Sorry.
+Cherug: If you need anything fixed or glued, I'm here to help!
+Spike: Thanks!
+<<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 8920,11160
+__PrivCrochet_tags: 
+title: cherug wooden branch y
+---
+Cherug: Woah! I...think I can do something with this.
+Cherug: I'd need some sorta plant though.
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 7800,11160
+__PrivCrochet_tags: 
+title: cherug springflower vine
+---
+Cherug: Woah! I...think I can do something with this.
+Cherug: I'd need some sorta wooden branch though.
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 5280,11440
+__PrivCrochet_tags: 
+title: springflowers wrong item
+---
+Flowra: What is this?
+Fleur: Why, of course, it's a...
+Fleur: Hm...
+Flowiel: Stop pretending. None of us knows what this is.
+Follen: Sorry...
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1640,11440
+__PrivCrochet_tags: 
+title: springflowers
+---
+Springflowers: Which one of us do you want to talk to?
+-> Bye
+    Follen: See ya!
+    <<stop>>
+-> Flowra
+    <<hop flowra>>
+-> Flowrie
+    <<hop flowrie>>
+-> Follen
+    <<hop follen>>
+-> Fleur
+    <<hop fleur>>
+-> Florn
+    <<hop florn>>
+-> Flowiel
+    <<hop flowiel>>
+<<jump springflowers>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 4440,11440
+__PrivCrochet_tags: 
+title: springflowers wake up
+---
+Flowra: Gwahhh!
+Flowrie: My, how refreshing! Thank you kind strangers!
+Follen: Ohhh yeahhh that's the stuff! Been meaning to drink some fresh springwater.
+Spike: Oh, I get it. Spring water. Cuz this is Spring's paradise. Clever.
+Follen: I have NO idea what you're on about. However, we ARE in Spring's paradise!
+Flowiel: Careful bro, I think that guy knows way too much. Do you think he's the...
+Spike: Huh?
+Florn: The...the dangerous...killer...
+Fleur: Why, yes, there so happens to be a...dangerous individual.
+Fleur: A rodent-like creature. Wielding a sharp, sharp object...
+Fleur: Hmm. No. You two are nothing like him.
+Flowrie: That's so true, sister! The knife guy's got like...
+Flowra: An apple-hat.
+Florn: A knife...
+Follen: A business!
+Flowiel: An apple-hat. Wait no I mean[continue]
+Fleur: And a crush on our mother.
+Flowiel: Yeah, that's what I was gonna tell em. Thanks.
+Flowra: I think he's after her...with...with that KNIFE, no less!!
+Flowiel: Here, take [create_sprite_item,spr_item_springflower_vine]this thing. It should come in handy.
+Follen: Combine it with something and make...something dangerous.
+Follen: That vine's sturdy! You can throw pebbles with it.
+Fleur: [destroy_sprite]...How ridiculous. Why would anybody throw pebbles with such delicate plants?
+Flowra: Don't listen to her!
+Fleur: Don't listen to HER..!
+Florn: Please...find the killer...knock him down...for our mother's sake...
+Follen: For our mama's sake indeed!
+Spike: Alright. We'll think of somethin. Thanks!
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 2200,11440
+__PrivCrochet_tags: 
+title: springflowers asleep
+---
+<<if visitedSelf() == 1>>
+Spike: These flowers look like they're sleepin well.
+Spike: A lil "too" well, if you ask me.
+<<else>>
+Spike: The grass is dreaming.
+<<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1080,11160
+__PrivCrochet_tags: 
+title: apple
+---
+<<if visitedSelf() == 1>>
+Spike: Hey! Check it out! Pretty big apple huh?
+Spike: ...
+Spike: I don't like apples.
+-> Me neither
+    Spike: I know, right?
+    Spike: They ain't fun to eat!
+-> I do, actually!
+    Spike: Huh! Lucky you! There's an apple dangling from there and it's all yours.
+    Spike: ...If ye can reach it, I mean.
+-> I prefer apple pie
+    Spike: Hey! Same here!
+    Spike: It's weird, y'know? We don't like apples unless they've been pie'd.
+    Spike: Too bad I dunno how to make pie.
+<<elseif visitedSelf() == 2>>
+Spike: You think I'd become smart if this apple fell on my head?
+-> That's not how it works...
+    Spike: You're right.
+-> Totally!
+    Spike: You makin fun of me!
+<<else>>
+Spike: Yep. It's an apple alright.
+<<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 26000,11160
+__PrivCrochet_tags: 
+title: spring
+---
+<<declare $is_spring_upset = false>>
+<<roomMusicFadeOut()>>
+<<talkspriteCreate("spring", 0)>>
+<<actorHide("spring")>>
+<<delaySeconds(.5)>>
+Spike: [camshake]WHOSE THAT?!?
+Spring: W- [emote,5][delay,150]who? Where?!
+Spike: You! You kinda just appeared in my field of view.
+Spring: [emote,1][spring_anime,0]Ah! I am...very sorry about that...
+Spring: [emote,0]I've grown to be discreet in nature. It's...a little dangerous here...
+Spring: [spring_anime_stop]Ah, right. I am a stranger to you two, am I not?
+<<musicFadeIn("snd_spring")>>
+<<actorShow("spring")>>
+Spring: Greetings, I am Spring.
+Spring: I am the humble nymph of the paradise you've landed in.
+Spring: Guardian of the season of Spring...which is me. Well, my season.
+Spike: [emote,0]Nice to meetcha! Name's Spike.
+Spring: [spring_anime,1][emote,1]You...saved me. Isn't that right?
+Spike: [emote,0]Right, yeah! Did I?
+-> Yeah, you did!
+    Spike: I...I guess I did!
+    Spring: [emote,1]How wonderful! I knew you'd save me!
+    Spring: [emote,0]May I invite you over for tea? I- it's the least I can do!
+    Spike: Sure! I don't see why not.
+-> No, I DID!
+    Spike: I mean, yeah. Wasn't me!
+    Spring: [emote,4][spring_anime,3]...I see.
+    Spring: Thank you.
+    Spring: [emote,0]May I invite you for tea? Spike [camshake][spring_anime,2]must come with you!
+    -> Yes!
+        Spring: [emote,1]Wonderful! Then, it's settled!
+    -> ...No
+        Spring: [emote,7][spring_anime,2]I- I insist!
+        -> Yeah sure.
+            Srping: [emote,1][shake]Thank you so much!
+        -> I said no.
+            <<set $is_spring_upset = true>>
+            Spring: [music_fade_out][spring_anime_stop]...
+            Spring: [spring_anime,4][emote,2]N- no, I get it. I really do.
+            Spring: [emote,4]I'm...I'm a little old, right? I'm just not what I used to be, haha!
+            Spring: [spring_anime_stop]I...I'll be going now.
+            Spring: Clearly the hero has no interest in the princess...
+            <<talkspriteFadeOut()>>
+            <<delaySeconds(1)>>
+            Spike: I feel like apologizing to her, right now.
+            Spike: Any idea where she might live?
+            <<stop>>
+-> We both did.
+    Spike: It was teamwork, really! This pal helped me out!
+    Spring: [emote,4]A-ah yes of course. [emote,0]Thank you!
+    Spring: May I invite you...two over for tea? There will be enough for everyone!
+    Spike: Enough cookies too?
+    Spring: [emote,1]Haha! Why, naturally!
+Spring: [spring_anime,1]We shall meet at the treehouse. It's only a few steps away.
+Spring: I will ready everything.
+Spring: [emote,0]See you soon, Spike, my prince!~
+<<springAnimeStop()>>
+<<roomMusicFadeOut("snd_spring")>>
+<<talkspriteFadeOut("spring", 0)>>
+Spike: Hmm...
+Spike: A treehouse, huh? C'mon, let's look for it!
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 2480,11160
+__PrivCrochet_tags: 
+title: buried crinoid
+---
+<<if visitedSelf() == 1>>
+Spike: There's somethin in the tree. It's sorta glitter-like...
+Spike: Looks pretty important. Too bad we can't reach it.
+<<else>>
+Spike: Pretty.
+Spike: (important.)
+<<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 3320,11160
+__PrivCrochet_tags: 
+title: buried crinoid too high to cut
+---
+<<if visitedSelf() == 1>>
+Spike: You know, I'd love to cut that, but I'm not really tall. Can't reach it.
+Spike: It's nothin to be ashamed of, right?
+-> I'm tall and it sucks!
+    Spike: Sorry to hear.
+    Spike: I guess being short isn't like...the worst, then.
+    Spike: Nevermind what the bullies say, am I right?
+-> I'm short and it sucks!
+    Spike: Same, pal!
+    Spike: Much easier to get bullied!
+    Spike: I ain't a gnome, for cryin out loud!!
+-> I'm super short and it sucks for everyone but me!
+    Spike: What ARE you?!
+    -> Super short (and it sucks for everyone but me!)
+        Spike: Heh, youse a weirdo, but I ain't complainin.
+<<else>>
+Spike: Can't reach it. Sorry.
+<<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 14240,11160
+__PrivCrochet_tags: 
+title: newton
+---
+<<actorHide("newton")>>
+<<roomMusicFadeOut()>>
+<<talkspriteFadeIn("newton",5)>>
+Newton: Hold it right there.
+Newton: I bet you must feel like some sort of hero.
+Newton: Isn't that right?
+-> You bet!
+    Newton: I wouldn't be so sure.
+-> ...Not really
+    Newton: That's more like it.
+Newton: [emote,0]I saw you having a dandy good time with the princess.
+Newton: [c_fuchsia]Spring[/c], ain't that right?
+Newton: Before you get any funny ideas...
+Newton: Don't you go forgetting she belongs to [emote,5][camshake]me.
+Newton: So the next time you get friendly with her.
+Newton: [c_red]I'll make you remember me.[/c]
+<<delaySeconds(1.5)>>
+Newton: Understood?
+Spike: Yep!
+Spike: [emote,0]No friendly chats with Spring. Gotcha.
+Spike: We'll get going now, mister killer!
+Newton: Now [emote,5][camshake]wait just a second.
+Newton: Don't be fooled by my appearances, you two.
+Newton: Do you really think I'm nothing but a mere killer?
+Newton: Do you think I'm just some knife-swinging monster?
+Newton: No, I'm much MORE than that.
+Newton: I...[delay,50]am...[delay,50]
+<<actorShow("newton")>>
+<<newtonAdvertise(0, "[c_yellow]NEWTON[/c]'S \nAPPLE-SHOPPED\nSHAPE", "[shake]wait no I misspelled it")>>
+Newton: [music,snd_newton][c_yellow]NEWTON[/c]! YOUR LOCAL [c_yellow]TRADER[/c]!!
+Spike: Huh??!?
+Newton: If you've found yourself unable to progress on your fantastic journey, Newton is here to help!
+Newton: What do I ask for? Anything you find [c_yellow]shiny[/c] and [c_yellow]valuable[/c]!
+Newton: [emote,0]In exchange for these items, you'll get something you can use!
+Newton: [emote,1]...Or something slightly less shiny and slightly more useful!
+Newton: [emote,0]Visit my apple-shaped-shop and behold the wonders [c_yellow]Newton[/c] brings from around the world!
+<<newtonAdvertiseStop()>>
+Newton: [emote,3]Well? Pretty terrific, eh?
+Spike: You want to lure us in there so you can kill us!
+Newton: [emote,5][camshake]WHAT MAKES YOU THINK THAT?!
+Newton: I- [delay,60][emote,1]I mean...Of course not.
+Newton: I would never use this knife on my dear customers..!
+Spike: ...Right.
+Spike: Whatcha think?
+-> We're going in
+    Newton: [emote,3]Thank you! I knew you could trust me! I will not disappoint!
+    Spike: (That's what they all say..!)
+-> We are NOT going in
+    Newton: [emote,0]Even after my lil speech, huh?
+    Newton: I worked pretty hard on this, you know? Not that you would know a thing about marketing.
+    Spike: You don't point a knife at the customer before doing the advertisement, idiot!!
+    Newton: [emote,3]A- ah I was just joking around! No stabbing here! None at all!
+    Newton: See? This knife is squeaky clean!
+    Spike: Well, it IS looking pretty clean, I'll give you that.
+-> This guy kinda looks like...a hamster?
+    Newton: ...
+    Spike: ...
+    Newton: What[continue]
+    Spike: [camshake]WAIT NO YOU HAVE A POINT ACTUALLY HE DOES LOOK LIKE ONE!!
+    Spike: NEWTON YOU'RE LOOKIN LIKE A RODENT!
+    Newton: [emote,2]Q- quit it you two! There's nothing wrong with a little fur!!
+    Spike: So that's what you are! A mouse!
+    Newton: [camshake]I'M NOT A MOUSE!
+    Spike: Boooo! Here comes a cat!
+    Newton: [emote,5]N- NO CATS ALLOWED IN THIS SHOP!
+Newton: [emote,1]In any case, please do visit my shop.
+Newton: It's right there. Apple-shaped house. Can't miss it.
+Newton: [emote,3][camshake]BUY BUY OR BYE BYE!
+<<talkspriteFadeOut()>>
+Spike: [music_fade_out]Well, it's up to you, pal!
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 23480,11160
+__PrivCrochet_tags: 
+title: pompom
+---
+<<if visitedSelf() == 1>>
+Pompom: Oh! Visitors! Good morning!
+Spike: Hiya.
+Pompom: It's nice to meet you! My name is Diane Pom.
+Pompom: But you can call me "Pompom". It has a nice ring to it!
+Pompom: And it's what...Spring calls me, too...
+Pompom: Say, have you two seen her around lately?
+-> Yeah
+    Pompom: Why, that's nice!
+    Pompom: ...
+    Pompom: She hasn't mentioned my name, has she?
+    Pompom: I worry she doesn't think about me anymore...
+    Pompom: Have I done something wrong? Maybe I shouldn't have visited her sister...
+-> No we absolutely didn't
+    Pompom: Is that so?
+    Spike: Yeah. We absolutely didn't nevern't.
+    Pompom: Didn't at all nevern't?
+    Spike: Nevern't indeedn't.
+    Pompom: Hm...better luck next time, I suppose!
+Pompom: Ah, pardon me. I really shouldn't be acting like this.
+Pompom: If you plan on meeting with Spring, there is something important you must know.
+Pompom: She despises technology.
+Pompom: She used to love it! But, well, now she doesn't.
+Pompom: She had some change of heart for all things digital.
+Pompom: But she's always loved all things artistic! It's a great conversation topic for her.
+Pompom: Thanks for listening. I hope all things go well with the princess!
+<<else>>
+Pompom: You know, I heard Summer has a close friend too!
+Pompom: Some smiling cat of sorts. Black, white, yellow, pink...
+Pompom: I hope Summer hasn't forgotten about him.
+<<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 6400,11160
+__PrivCrochet_tags: 
+title: cherug fix watering can
+---
+<<if visited("cherug") == 0>>
+<<hop cherug>>
+Spike: Oh, actually.
+<<endif>>
+Spike: Right, so we found [create_sprite_item,spr_item_watering_can_broken]that thing.
+Cherug: Hmm...
+Cherug: OH!! I KNOW WHAT THIS IS!
+Spike: Well, spit it! What is it!
+Cherug: [camshake]*PUEH*!!
+Cherug: All fixed!
+Cherug: It's...a [c_yellow][sfx,snd_punch][sfx,snd_ram_electricguitar1][create_sprite_item,spr_item_watering_can]watering can[/c]!!!
+Spike: A watering [c_yellow]can[/c]?
+Cherug: I sure hope it can[continue]
+Spike: Anyway we'll get going now. Thank you.
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 6120,11160
+__PrivCrochet_tags: 
+title: cherug fix stepladder
+---
+Spike: So we found that [create_sprite_item,spr_item_stepladder_broken]thing.
+Cherug: What IS that?!
+Spike: I dunno! Looks pretty important though!
+Spike: Because that fella picked it up!
+Cherug: What an odd fellow indeed..!
+Cherug: [destroy_sprite]But wait! I can glue the parts together and...
+<<roomMusicFadeOut()>>
+<<delaySeconds(2)>>
+Spike: ...
+<<delaySeconds(1)>>
+Spike: ........
+<<delaySeconds(1.5)>>
+Cherug: Thank you for your patience.
+Cherug: For I have now made...
+Cherug: A [camshake][sfx,snd_punch][sfx,snd_ram_electricguitar2][c_yellow][create_sprite_item,spr_item_stepladder]LADDER[/c]!!
+Spike: That ain't a ladder! That's a [c_yellow]stepladder[/c]!
+Cherug: What's the difference?
+Spike: One's tall, one's short!
+Cherug: I can make it taller!!
+Spike: No need, really. Thanks!
+<<roomMusicFadeIn()>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 6680,11160
+__PrivCrochet_tags: 
+title: cherug make slingshot
+---
+Cherug: Oh! Oh! Look at that!
+Cherug: A conveniently-shaped branch [delay,200]and a conveniently-shaped vine!!
+Cherug: Can I make something with those two?!
+Spike: Sure! Have a blast!
+Cherug: Okay! Here goes!
+<<roomMusicFadeOut()>>
+<<delaySeconds(2)>>
+Spike: So, how is it[continue]
+Cherug: [camshake]ONE MINUTE!!
+Spike: Sorry!
+<<delaySeconds(1.5)>>
+Cherug: There we go!
+Cherug: I made a [sfx,snd_ram_electricguitar5][create_sprite_item,spr_item_slingshot][c_yellow]slingshot[/c]!
+Spike: Thanks!
+Cherug: That'll come in handy against the...[c_red]dangerous[/c]-lookin fellow in that other room...
+Spike: [destroy_sprite]Huh?!
+<<roomMusicFadeIn()>>
+Cherug: But anyway. Have a blast! And be careful out there!
+Spike: ...Thanks!
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1360,11440
+__PrivCrochet_tags: 
+title: spring vs newton
+---
+<<actorHide("newton")>>
+Spring: PLEASE!! SOMEBODY HELP!!
+Newton: NOBODY'S COMING FOR YOU THIS TIME! HAND IT OVER!
+Spring: I don't know what you're on about!!
+Spring: [shake]HEEEEEEELP!!!
+<<jump slingshot>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 17600,11440
+__PrivCrochet_tags: 
+title: treehouse entrance branches superior topiary shears stuck
+---
+The shears are stuck in the branches.
+You can't get them out.
+Spike: Somethin the matter, pal?
+-> The shears broke
+    Spike: What?! We just bought them!!
+    Spike: I told ya! This mouse scammed us!
+-> The branches ate them
+    Spike: ...
+    Spike: I mean, yeah, sure. This place is insane. I'll believe ya.
+Spike: Good news though! I just found [create_sprite_item,spr_item_crinoid_big]that thing in the branches!
+Spike: [destroy_sprite]Looks shiny. Can I keep it?
+-> You do you, Spike
+    Spike: Thanks!
+-> Hands off! It's mine!
+    Spike: Nuh-uh! Finders keepers!
+    -> Keepers losers!
+        Spike: Losers winners!!
+        -> Winners finders!
+            Spike: Hah! Seems I'm a winner, then! Get dunked onnn!
+            Spike: Er er er er er.
+Spike: Say, think that rat would want it?
+Spike: We might get somethin out of it this time! [delay,200]Hopefully.
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 14520,11160
+__PrivCrochet_tags: 
+title: newton crinoid
+---
+<<talkspriteFadeIn("newton")>>
+Spike: Hey! I found somethin.
+Newton: Better be worth my time.
+Spike: It's completely useless, actually.
+Spike: But we found [delay,80][camshake][create_sprite_item,spr_item_crinoid]this.
+Newton: [destroy_sprite][emote,2]G- [delay,100][camshake]give that to me!!
+Newton: [emote,3]I can give you...let's see...[create_sprite_item,spr_item_topiary_shears_superior]this little gem!
+Spike: Hey! This is exactly what we need!
+Newton: [destroy_sprite]It's all yours! [delay,100][emote,1]Now scram.
+<<talkspriteFadeOut()>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 27120,11440
+__PrivCrochet_tags: 
+title: well fill watering can
+---
+Spike: Well well well.
+Spike: Hey, a full watering can is more handy than an empty one. I'll give you that.
+Spike: Alright, let's get to filling!
+<<delaySeconds(2)>>
+Spike: [sfx,snd_water][create_sprite_item,spr_watering_can_full]So I guess it's full now.
+Spike: Not sure what to do with this now.
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 17320,11440
+__PrivCrochet_tags: 
+title: treehouse entrance branches
+---
+Spike: I think we're gonna need to cut through those to get to the other side.
+Spike: Somethin tells me we're gonna need strong shears.
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 14800,11160
+__PrivCrochet_tags: 
+title: newton crinoid big
+---
+<<talkspriteFadeIn("newton")>>
+Spike: ...We found something. Again.
+Newton: Mhm?
+Spike: It's uh...actually, I'm pretty tempted to keep it.
+Newton: [emote,2][camshake]Not if I make a good deal! Show me what you got!
+Spike: [create_sprite_item,spr_item_crinoid_big]There it is!
+Newton: [destroy_sprite][emote,3]Wonderful, wonderful!
+Newton: H- how can I refuse shinies like that?!
+Spike: Now [emote,0][camshake]hold it there, pal!
+Spike: The shears you gave us were total garbage! [delay,200][emote,1]I'm askin for something real good this time!
+Newton: ...Ah, yes. Maybe the shears weren't...hm...
+Spike: We'd like the best shears you got.
+Newton: [emote,4]But...they're the shiniest, and...
+Spike: No big shiny star for you, then!
+Newton: [emote,1]W- [delay,100]wait!! I can...err...
+Newton: [emote,0]Fine. I'll go get...the [c_yellow]good stuff[/c]. One moment.
+<<roomMusicFadeOut()>>
+<<talkspriteFadeOut()>>
+<<delaySeconds(2)>>
+<<roomMusicFadeIn()>>
+<<talkspriteFadeIn("newton")>>
+Newton: ...here.
+Newton: [create_sprite_item,spr_item_topiary_shears_legendary]This should do.
+Spike: Woah! They're golden!
+Newton: [destroy_sprite][emote,3]And they're...all yours!
+Newton: [emote,4]Hm. I'm kinda curious.
+Newton: What are you making with these shears? You seem passionate about topiary.
+-> A statue of Spike
+    Newton: [emote,1]...I see.
+    Newton: Well, you do you.
+-> A statue of you
+    Newton: [emote,3]Why didn't you say so?! I wouldn't have been so hesitant about handing you these shears!
+    Newton: [emote,0]Try to focus on the headshape more. The rest should be easy.
+    Spike: We'll get going now.
+    Newton: [emote,2]I bet you're just jealous!
+-> A garden gnome
+    Newton: [emote,1]Wouldn't you need clay for that? No?
+    Newton: [emote,0]Well. I'm not stopping you. [emote,4]Good luck, I guess.
+<<talkspriteFadeOut()>>
+<<delaySeconds(.5)>>
+<<talkspriteCreate("newton",5)>>
+Newton: [camshake]WAIT I FORGOT SOMETHIN.
+Spike: [camshake]DON'T POINT THIS KNIFE AT US!
+Newton: Oh, [delay,40][emote,0]right. Sorry bout that.
+Newton: [emote,1]It's about [c_fuchsia]Spring[/c]. I need you to deliver somethin to her.
+Newton: I know it sounds ridiculous, but I...[delay,40][emote,3]love her.
+Spike: It does sound ridiculous, I'll give you that.
+Newton: N- [delay,40][camshake][emote,2]no! You don't get it!
+Newton: [emote,0]I...I wasn't going to hurt her! I just wanted SOMETHING from her is all!
+-> Wanted what?
+    Newton: Ah, it's quite alright, actually.
+    Newton: [emote,3]You found it for me. Thank you.
+-> Why threaten her?!
+    Newton: [emote,1]Guardians don't exactly respect us snootlings...anymore.
+    Newton: It's either "be ignored" or "be feared". No other way around. Nope.
+    -> "Anymore"?
+        Newton: There was an [c_orange]incident[/c] involving a guardian and a snootling.
+        Newton: I wish I was here to see it.
+    -> Terrible excuse
+        Newton: Maybe so.
+        Newton: I guess I just wanted to get done with that task quickly.
+        -> Task?
+            Newton: [emote,2]Nothin you should know about!
+            Newton: You can ask the other guy if you want!
+Spike: [emote,0]Aight, what do you need us to deliver?
+Newton: I need you to deliver [delay,30][create_sprite_item,spr_item_newton_love_letter]this.
+Spike: Huh, aight. Not bad.
+Newton: [destroy_sprite]I'm going on a date with her.
+Newton: [emote,5]So you goin in there to deliver the letter and [camshake]GET. [delay,40][camshake]OUT.
+Newton: Understood[continue]
+Spike: Gotcha.
+Newton: ...
+Newton: [emote,1]...Thanks.
+Spike: No problem pal.
+<<talkspriteFadeOut()>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 22640,11160
+__PrivCrochet_tags: 
+title: newton spring shop wrong item
+---
+<<talkspriteFadeIn("newton")>>
+Spike: So we found...this.
+Newton: [emote,4]Hm...
+Spike: Anything we can trade this for?
+Newton: [emote,1]Absolutely not.
+Newton: [emote,0]Go find something worth my time, will ya?
+<<talkspriteFadeOut()>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 22080,11160
+__PrivCrochet_tags: 
+title: newton spring shop use item on merchandise
+---
+<<if visitedSelf() == 1>>
+Newton: [camshake]Don't mess with the merchandise!!
+Spike: Sorry!
+<<else>>
+Spike: (Let's not.)
+<<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 18440,11160
+__PrivCrochet_tags: 
+title: newton spring shop bag
+---
+<<if visitedSelf() == 1>>
+Newton: I see you've taken interest in this bag of hazelnuts.
+Spike: Eh.
+Newton: Branded "Newton"! Flavor increased by [c_yellow]20%[/c]!
+Spike: What's that supposed to mean?
+Newton: It means "buy it"!
+<<else>>
+Spike: It's a bag of hazelnuts, apparently.
+<<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 18720,11160
+__PrivCrochet_tags: 
+title: newton spring shop clover
+---
+<<if visitedSelf() == 1>>
+Newton: Why, of course.
+Newton: A clover from the kingdom of [c_fuchsia]Spring[/c]!
+Spike: Neat! It has 4 leaves too! Looks pretty rare.
+Newton: Sure is!
+Newton: Want it?
+Spike: No.
+<<else>>
+Spike: Rare clover.
+<<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 18160,11160
+__PrivCrochet_tags: 
+title: newton spring shop apples
+---
+<<if visitedSelf() == 1>>
+Newton: I see you're interested in those.
+Newton: They're apples. They're painted in such a dark color that it makes their features indistinguishable.
+Spike: Cool! Painted them yourself?
+Newton: No.
+Newton: I think Spring did.
+Spike: Got any clue as to why?
+Newton: Eh.
+Newton: I wouldn't know. Artists are strange.
+Spike: Hey, I'm curious actually. You an artist, pal?
+-> Yeah
+    Spike: That's cool!
+    Newton: You must be strange too, then.
+    Spike: That's the beauty of it, pal!
+-> Sort of
+    Spike: You'll get there! Eventually!
+    Spike: Never too late for that!
+-> Not really
+    Spike: That's okay. I'm not really an artist either.
+    Spike: I just play some electric guitar here n there.
+    Newton: What are you? A band kid?
+    Spike: Sort of! A band kid with some experience. I guess.
+<<else>>
+Spike: Painted apples.
+Newton: Wanna buy those?
+Spike: No thanks.
+<<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 19840,11160
+__PrivCrochet_tags: 
+title: newton spring shop hazelnut
+---
+<<if visitedSelf() == 1>>
+Newton: Hazelnut.
+Newton: It's just like me! Lonely. Rejected by its peers.
+Spike: Is it on sale?
+Newton: No. It's symbolic.
+<<else>>
+Spike: Sad, lonely hazelnut.
+<<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 19560,11160
+__PrivCrochet_tags: 
+title: newton spring shop empty jar
+---
+<<if visitedSelf() == 1>>
+Newton: Ah, this.
+Newton: It's a maple syrup jar.
+Spike: It's empty!
+Newton: Your point being?
+Spike: Well, it can't be a maple syrup jar if it doesn't contain maple syrup, right?
+Newton: Oh but it will.
+Spike: Oh.
+Spike: Can I have some?
+Newton: No.
+Spike: Aw man.
+<<else>>
+Spike: Some maple syrup jar, devoid of maple syrup.
+<<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 19280,11160
+__PrivCrochet_tags: 
+title: newton spring shop eaten apple
+---
+<<if visitedSelf() == 1>>
+Newton: Hey! Someone took a bite out of this!
+Spike: Wasn't me!
+Newton: Must've been that cherug.
+Newton: Some customers think this is a buffet!!
+Spike: They're probably not used to the whole "trading" business.
+Newton: One day, they will! Mark my words!
+Spike: (Words marked as; incorrect)
+<<else>>
+Spike: This apple's been bitten.
+<<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 20400,11160
+__PrivCrochet_tags: 
+title: newton spring shop shiny mass
+---
+<<if visitedSelf() == 1>>
+Newton: Oh, this.
+Newton: I haven't gotten to that yet.
+Spike: What are you gonna do with...that?
+Newton: I'm going to mold it into shiny stars.
+Spike: What's a shiny star for?
+Newton: See it as some sort of...token. For exchange.
+Spike: Like a coin?
+Newton: Yes! Star-shaped coins. Crinoids. It's the currency we use. I could trade almost anything for a few.
+Newton: Do you think you could find some? We can trade!
+Spike: Sure. Crinoids, huh. We'll be lookin for em.
+Newton: Thanks.
+<<else>>
+Spike: Strange shiny mass. Presumably used to make...crinoids.
+<<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 20120,11160
+__PrivCrochet_tags: 
+title: newton spring shop hazelnuts on floor
+---
+<<if visitedSelf() == 1>>
+Spike: Tis a shame.
+Newton: What is?
+Spike: The hazelnuts are on the floor! Wasted food, pal!
+Newton: Not here, no.
+Newton: The creatures will eat whatever food they find on the floor.
+Spike: Oh, I see.
+Newton: Business is..."blooming", or whatever.
+<<else>>
+Spike: Hazelnuts. On the ground.
+<<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 21240,11160
+__PrivCrochet_tags: 
+title: newton spring shop tip jar
+---
+<<if visitedSelf() == 1>>
+Newton: [camshake]DON'T TOUCH THAT!!
+Spike: Hey I was just lookin at it!
+Newton: With your hands?!
+Spike: ...yeah!
+Newton: This is my hard-earned cash!
+Spike: People visit often?
+Newton: Yes! Of course!
+Newton: People often visit rarely.
+Spike: Tough luck, pal.
+<<else>>
+Spike: Looks like some sort of tip jar.
+<<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 22360,11160
+__PrivCrochet_tags: 
+title: newton spring shop worm
+---
+<<if visitedSelf() == 1>>
+Newton: Oh, this?
+Newton: It's [c_aqua]Wormie[/c].
+Newton: Say hi, Wormie!
+(Newton makes Wormie move around a bit.)
+Spike: Hiya, Wormie!
+(Newton makes Wormie shake her head.)
+Newton: I don't think she likes you.
+Spike: Aw. Sorry to bother, Wormie.
+You engaged in a conversation with a literal plushie. Congratulations.
+<<else>>
+Spike: Worm.
+Newton: Worm.
+<<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 16480,11440
+__PrivCrochet_tags: 
+title: treehouse cog area 1
+---
+Spike: Hmm...
+Spike: I think we need a bunch of cogs to fit in there.
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 22920,11440
+__PrivCrochet_tags: 
+title: treehouse painting 1
+---
+"Time spent together" -Anonymous
+A family photo.
+It features a happy-looking man and his two daughters.
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 23200,11440
+__PrivCrochet_tags: 
+title: treehouse painting 2
+---
+"My worst memory" -Spring
+It features a little girl's portrait.
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 23480,11440
+__PrivCrochet_tags: 
+title: treehouse painting 3
+---
+"Another me" -Spring
+A desert landscape.
+A big pyramid is towering above the dunes.
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 16760,11440
+__PrivCrochet_tags: 
+title: treehouse cog area 2
+---
+Spike: Hmm...
+Spike: Only one cog can go there. A moderately big one.
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 23760,11440
+__PrivCrochet_tags: 
+title: treehouse painting oil
+---
+<<if visitedSelf() == 1>>
+Spike: Covering paintings in oil? You're insane!
+Spike: That ain't how oil painting works! You gotta like, make your own painting! Not ruin others!
+<<else>>
+Spike: Not doin it!
+<<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 20120,11440
+__PrivCrochet_tags: 
+title: treehouse ladder
+---
+Looking at this ladder, you feel the urge to [c_yellow]move[/c].
+Spike: Is there somethin on your mind?
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 20400,11440
+__PrivCrochet_tags: 
+title: treehouse ladder broken
+---
+Spike: Y'know what this ladder could use?
+Spike: Some fixin! That's what!
+Spike: Some extra wood, a hammer and some nails.
+Spike: If we had that, I could get it fixed in no time, pal!
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 15360,11440
+__PrivCrochet_tags: 
+title: treehouse clock
+---
+Spike: Let's see now.
+Spike: It's {getCurrentTimeFormattedSimplified()}.
+<<random option>>
+->
+    Spike: Good time to be stuck inside a treehouse!
+->
+    Spike: Good time to be sleepin.
+->
+    Spike: Good time to look at the time.
+->
+    Spike: Good time to be carrying a love letter.
+->
+    Spike: Good time to have tea with a stranger.
+->
+    Spike: Good time to have a good time.
+->
+    Spike: Good time to be reading a book.
+->
+    Spike: Good time to be playin video games.
+    Spike: Too bad that's not what we're doing.
+    -> I'm playing video games
+        Spike: Well I ain't!
+    -> True
+        Spike: I know right.
+->
+    Spike: Good time to...
+    Spike: Wait...{getCurrentTimeFormattedSimplified()}...
+    Spike: Good time to be lookin at the time.
+->
+    Spike: Good time.
+->
+    Spike: Bad time.
+->
+    Spike: Good time to be commenting on the time.
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 20680,11160
+__PrivCrochet_tags: 
+title: newton spring shop shop
+---
+<<if visitedSelf() == 1>>
+Spike: Yeah I was wonderin, actually.
+Spike: How long has this shop been here?
+Newton: Just moved in.
+Newton: [emote,1]I mean, literally "moved" in.
+Newton: [emote,0]My shop has wheels.
+Spike: That's...cool!
+<<else>>
+Newton: Wanna work here?
+-> Yeah!
+    Newton: [emote,2]I don't trust you enough for that!
+    Newton: You wanna steal my shinies, don'tcha?
+    -> Yeah!
+        Newton: [emote,1]Hmph. You've got the spirit, but that's all!
+    -> ...No
+        Newton: [camshake]You don't like my shinies enough to want to steal em?!
+        Newton: You ain't fit for workin here!
+-> I'll pass
+    Newton: [emote,3]Come back later and I might hire you!
+    Spike: (Don't listen to him!)
+<<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 20960,11160
+__PrivCrochet_tags: 
+title: newton spring shop spring
+---
+<<if visitedSelf() == 1>>
+Newton: Spring? [emote,3]She's my pookie!
+Spike: Already usin the nicknames huh?
+Newton: [emote,5]I'm practicing. You know. My "love language".
+Spike: I don't think she's gonna be interested if you keep brandishing that knife of yours.
+Newton: [emote,4]...Good point.
+Newton: Right. Spring. She's powerful alright.
+Newton: Just a little...how do I put it...
+Newton: [emote,0]Well she doesn't have nearly as much wrath as [c_yellow]her father[/c].
+Spike: Would he approve of your lil business?
+Newton: [emote,2][camshake]You kiddin?! He'd freeze me on the spot! Just like with the others!
+Newton: [emote,0]Him and his...sorcery.
+Spike: What's his name?
+Newton: ...
+Newton: [emote,5]Don't ask.
+<<else>>
+Newton: You seem awfully curious about her.
+Newton: [emote,2]Quit it!!
+<<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 19000,11160
+__PrivCrochet_tags: 
+title: newton spring shop dad
+---
+<<if visitedSelf() == 1>>
+Newton: [emote,1]Hmph. Him.
+Spike: What's his name?
+Newton: [emote,0]His name's [c_aqua]Winter[/c].
+Newton: Guardian of the winter tundra. Powerful wizard. Has a terrible sense of humor.
+Spike: What about his sense of humor?
+Newton: [emote,1]Dad jokes.
+Spike: (What's wrong with em?!)
+Newton: He's the reason we're so...isolated.
+Spike: We?
+Newton: Snootlings. Fuzzy beings made from snow. You know- folks like me.
+Newton: [emote,2]If you ever meet Winter in person, I want him to know that I hate him.
+Newton: I hate him more than any other snootling.
+Newton: If there's a life he truly ruined...it's...
+Newton: [emote,1]...
+Newton: You don't need to know anything about this.
+<<else>>
+Newton: [emote,1]...
+<<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 17040,11440
+__PrivCrochet_tags: 
+title: treehouse door
+---
+<<if visitedSelf() == 1>>
+Spike: The path's open now! I think we can [c_yellow]move[/c] there now.
+<<else>>
+Spike: Let's [c_yellow]move[/c] there.
+<<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 11720,11160
+__PrivCrochet_tags: 
+title: intro
+---
+Spike: Alright. How do we start this?
+-> You can start reading
+    Spike: Heh, thanks.
+    <<musicFadeOut()>>
+    Spike: Now, let's see.
+    Spike: You're stranded inside a snowglobe.
+    Spike: Against all odds, you do not see a single trace of snow.
+    Spike: The scenery you find yourself in looks paradisiacal.
+    Spike: Like. Beautiful, and stuff.
+    Spike: The trees are dark, the leaves display hues of pink, magenta and purple
+    Spike: and the grass is mostly rosy.
+    <<showStory()>>
+    Spike: Patches of dark green grass welcome the springflowers, sleeping peacefully.
+    Spike: The clouds follow their usual path,
+    Spike: followed by the flying butter...buttermantises? And the petals floating about.
+    Spike: Cherugs rest peacefully among the fallen apples, nibblin away at them.
+    Spike: A yellow path welcomes you to the beautiful paradise of Spring.
+    Spike: The sky has never looked so blue.
+    Spike: ...
+    Spike: What do we do now?
+-> I'll start
+    Spike: Works for me!
+    Spike: Have a blast, pal.
+    You're stranded inside a snowglobe.
+    <<musicFadeOut()>>
+    Against all odds, you do not see a single trace of snow.
+    The scenery you find yourself in looks paradisiacal.
+    The trees are dark, the leaves display hues of pink, magenta and purple
+    and the grass is mostly rosy.
+    <<showStory()>>
+    Patches of dark green grass welcome the springflowers, sleeping peacefully.
+    The clouds follow their usual path,
+    followed by the flying buttermantises and the petals floating about.
+    Cherugs rest peacefully among the fallen apples, nibbling away at them.
+    A yellow path welcomes you to the beautiful paradise of Spring.
+    The sky has never looked so blue.
+    What will you do next?
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 17880,11440
+__PrivCrochet_tags: 
+title: treehouse entrance branches topiary shears
+---
+<<if visitedSelf() == 1>>
+Spike: I don't think these lil scissors are strong enough to cut through that.
+Spike: It just won't cut it! Haha, get it?
+Spike: ...
+Spike: Sorry.
+<<else>>
+Spike: We need better shears.
+<<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 10600,11160
+__PrivCrochet_tags: 
+title: flowra
+---
+Flowra: Here's a little secret...
+Flowra: [shake]I'M IN LOVE WITH THIS ARROGANT FURBALL!!
+Flowrie: We know!!!
+Follen: Oh wait really?
+Flowiel: ...You already know this.
+Follen: Oh yeah! I do!
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 10880,11160
+__PrivCrochet_tags: 
+title: flowrie
+---
+Flowrie: Here's a...secret...!!!
+Flowrie: IT'S MY BIRTHDAAAAAY!!
+Follen: Hey it's my birthday too!
+Flowiel: We're all siblings. It's all our birthday today.
+Flowrie: BIRTHDAY SURPRISE FOR [shake]EVERYOOOONE!!!
+Flowiel: ...*sigh*.
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 11160,11160
+__PrivCrochet_tags: 
+title: follen
+---
+<<if visitedSelf() == 1>>
+Spike: Heya.
+Follen: Shhh!!
+Spike: Huh?!
+Follen: Psst, hey!
+Follen: Yeaaaah you!
+Spike: What.
+Follen: You came here for a special...item, yeah?
+Spike: How "special"?
+Follen: Super duper ultra special, man!
+Follen: It's called...INFORMATION!
+Spike: ...
+Spike: Wanna tell me about the weather?
+Follen: Heh, you just know it, don'tcha?
+Follen: They announced...
+Follen: Tornados.
+Spike: Huh.
+Spike: Aight, I'll look for a bunker in the forest, or somethin.
+Follen: You didn't get this info...from me!
+<<elseif visitedSelf() == 2>>
+Follen: Sorry bud, one-time gift only!
+Spike: Now I gotta pay to know the weather?!
+Follen: Heh, yeah, gotta pay up!
+Spike: Nevermind that.
+Spike: I'd rather stare at the sky all day!
+Follen: Heh, that's alright...
+Follen: The other flowers love hearin' all about the weather, man!
+Follen: Business is bloomin!
+<<else>>
+Follen: Business is bloomin!
+<<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 9760,11160
+__PrivCrochet_tags: 
+title: fleur
+---
+Fleur: Here's a little secret.
+Fleur: ...
+Fleur: I think the white fuzzy guy smells nice.
+Fleur: That apple perfume...where does he get it?
+Flowra: I saw him rub half of an apple all over his fur, like a sponge.
+Fleur: Fascinating...
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 10040,11160
+__PrivCrochet_tags: 
+title: florn
+---
+Florn: ...
+Florn: Here's...a little secret...
+Florn: ...
+Florn: I miss Summer...
+Florn: [shake]*sniffle*
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 10320,11160
+__PrivCrochet_tags: 
+title: flowiel
+---
+Flowiel: Here's a lil' secret.
+Flowiel: Every so often, I see...a snowflake.
+Follen: In your DREAMS!
+Flowiel: Oh I wish.
+Flowiel: But it's a real snowflake. From Winter's tundra. It takes forever to melt.
+Flowrie: D- do you think..?!?!???!?!
+Flowiel: Yeah.
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 3320,11440
+__PrivCrochet_tags: 
+title: springflowers too much water
+---
+Follen: Ughhh water again?
+Flowra: I think it's pretty nice...
+Follen: Give us somethin else! Like...
+Follen: Oil! I wanna taste oil!
+Flowiel: You really don't.
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 3040,11160
+__PrivCrochet_tags: 
+title: buried crinoid cut
+---
+Spike: We got it!
+Spike: ...
+Spike: It's some sort of...[delay,200][create_sprite_item,spr_item_crinoid]star-shaped rock.
+Spike: What's that doing here anyway!?
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 10040,11440
+__PrivCrochet_tags: 
+title: teahouse spring
+---
+<<declare $teahouse_spring_music = false>>
+<<declare $teahouse_spring_newton = false>>
+<<talkspriteFadeIn("spring")>>
+<<springAnimeStop()>>
+Spring: Greetings, my prince. Are you two enjoying the atmosphere?
+-> Nothin to talk about
+    Spike: Sure is!
+    Spring: Wonderful!~
+    <<talkspriteFadeOut()>>
+    <<stop>>
+-> About the treehouse
+    <<hop teahouse spring about the treehouse>>
+-> The music
+    <<hop teahouse spring music>>
+    <<set $teahouse_spring_music = true>>
+-> Newton <<if !$teahouse_spring_newton>>
+    <<hop teahouse spring newton>>
+    <<set $teahouse_spring_newton = true>>
+-> Contacts <<if $teahouse_spring_music>>
+    <<hop teahouse spring contacts>>
+<<jump teahouse spring>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 12000,11440
+__PrivCrochet_tags: 
+title: teahouse spring newton love letter
+---
+<<talkspriteFadeIn("spring")>>
+<<if visitedSelf() == 1>>
+Spike: I uh, got somethin' for ya.
+Spring: Hm?
+[c_yellow]Love letter[/c] handed to Spring.
+Spring: [emote,2]Cute envelope.
+Spring opens the letter carefully.
+Spring: [emote,0]Hm...let's see...
+<<hop teahouse spring read newton love letter>>
+<<springAnime(0)>>
+<<endif>>
+<<jump teahouse spring ask date>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 13120,11440
+__PrivCrochet_tags: 
+title: teahouse spring wrong item
+---
+<<talkspriteFadeIn("spring")>>
+Spring: ...what is it?
+Spring: ...
+Spring: [emote,1]No, I don't know what this is. I am terribly sorry.
+<<talkspriteFadeOut()>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 9480,11440
+__PrivCrochet_tags: 
+title: teahouse hammer
+---
+<<if visitedSelf() == 1>>
+Spike: Hey! Whatcha trying to do with a hammer here?!
+-> Destruction
+    Spike: I can't let you do that! That's evil! We ain't evil, right?
+-> Pet gently with the hammer
+    Spike: Not buyin it!
+    Spike: Even if you were being genuine! (which you definitely WEREN'T!)
+<<else>>
+Spike: Quit it! You can't use this here!
+<<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 13400,11440
+__PrivCrochet_tags: 
+title: teahouse tea set
+---
+A tea set, prepared for two lovers.
+Alas, only one lover is present in the room.
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 13960,11440
+__PrivCrochet_tags: 
+title: teahouse teapot
+---
+It's a teapot.
+Its animal-like appearance radiates whimsy.
+It once belonged to two people.
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 8360,11440
+__PrivCrochet_tags: 
+title: teahouse exit
+---
+It's too early to leave her alone.
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 6120,11440
+__PrivCrochet_tags: 
+title: teahouse dirty plate
+---
+A dirty plate and a dirty teacup.
+They're useless now.
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 6400,11440
+__PrivCrochet_tags: 
+title: teahouse dirty plates
+---
+A pile of plates, abandoned in the grass.
+They once served a purpose.
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 9760,11440
+__PrivCrochet_tags: 
+title: teahouse red rose
+---
+A rose, but red.
+Riddled with thorns, blessed with its gentle appearance.
+You cannot hug it.
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 14520,11440
+__PrivCrochet_tags: 
+title: teahouse yellow rose
+---
+A rose, but yellow.
+Shining bright with a color rare in this kingdom, but not in the next.
+It looks like it once belonged here.
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 12840,11440
+__PrivCrochet_tags: 
+title: teahouse spring topiary shears legendary
+---
+<<if visitedSelf() == 1>>
+<<talkspriteFadeIn("spring")>>
+Spring: ...why...could this be...
+Spring: [emote,1]Oh my! Topiary shears! Golden, too..!
+Spring: [spring_anime,1]You must be an expert in the domain, isn't that so?
+Spike: Well, err, y'see...
+-> We love it!
+    Spike: Yeah! You bet! We love cuttin bushes in specific shapes!
+    Spike: Artistically!
+    Spring: [emote,0]I can easily say the same for myself!
+    Spring: [emote,2][spring_anime,0]Shall we sculpt each other's bust in unison?
+    Spike: Yeah! Why not??
+    Spike: You got a manual on topiary?
+    Spring: [spring_anime_stop][emote,0]Aren't you an...expert?
+    Spike: Asking for a friend!!
+    Spring: For the other fellow just here, I presume?
+    -> Yep, for me!
+        Spring: Why, of course!
+        Spring: [emote,5]I um...don't have a manual, actually.
+        Spring: [spring_anime,4]Feel free to ask Spike. I'm sure he can help!
+    -> Wait I dropped my glasses I'll be back
+        Spring: ...Ah, why, err...
+        Spring: [emote,1]The manual will have to wait, then.
+        Spike: Yeah sure. (THINK YOU'RE SLICK HUH?!)
+        Spring: [emote,7]Is everything alright?
+        Spike: [emote,0]Yep! All good!
+-> what does topiary mean??
+    Spring: Ah, why, it's...
+    Spring: ...[spring_anime,3]nevermind, actually.
+    Spring: [emote,1]It's a very...futile activity.
+    Spring: Sorry for the trouble...
+-> I'd make a topiary of you
+    Spring: Y- [delay,200][spring_anime,1][emote,1]you would?! Ahh!~
+    Spring: [spring_anime,4]B- but you shouldn't, really! I am just...a mere guardian...
+    Spike: Everything alright?!
+    Spring: [emote,1]I almost reached my daily quota of fainting..!~
+    Spike: (Be gentle on her, pal! I think she has a blood pressure problem.)
+<<talkspriteFadeOut()>>
+<<else>>
+<<talkspriteFadeIn("spring")>>
+Spring: [emote,1]Why, how charming! Tools so pretty you might be paralyzed by the fear of damaging them...
+Spring: Or maybe that's...just me.
+Spike: It's okay! We don't even use them all that much!
+Spring: [emote,1]Oh but I thought you...ah...nevermind...
+<<talkspriteFadeOut()>>
+<<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 11160,11440
+__PrivCrochet_tags: 
+title: teahouse spring hammer
+---
+<<talkspriteFadeIn("spring")>>
+<<if visitedSelf() == 1>>
+Spring: Why...hmm...
+Spring: [emote,7][spring_anime,3]Where did you...find this?
+Spike: Uh...where did we uh...
+-> Grew from a tree
+    Spike: Hammer tree.
+    Spring: [spring_anime_stop]...
+    Spring: [emote,1]May I see it?
+    Spike: No.
+    Spring: [emote,0]Oh, okay...
+-> pocket
+    Spike: Pocket.
+    Spring: Who's pocket?
+    Spike: This person's pocket.
+    Spring: [spring_anime,4]Do you...carry hammers often??
+    Spring: [emote,6]...Come to think of it, haha, maybe I don't want to know.
+-> Dinner
+    Spike: Dinner.
+    Spring: What kind of dinner did you eat to find a...
+    Spring: [spring_anime,0]I'm being made fun of, isn't that so?
+    Spike: Yes.
+    Spring: [emote,2]Haha~ I can appreciate a little humor!
+    Spring: [emote,7][spring_anime_stop]But not hammer-related. Please.
+    Spike: Gotcha.
+    Spring: Thank....thank you.
+<<elseif visitedSelf() == 2>>
+Spring: [emote,7][spring_anime,3]Stop showing me this, please.
+<<else>>
+Spring: [emote,7]...
+<<endif>>
+<<talkspriteFadeOut()>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 15360,11160
+__PrivCrochet_tags: 
+title: newton newton love letter
+---
+<<talkspriteFadeIn("newton")>>
+<<if visitedSelf() == 1>>
+Newton: I just gave you that.
+-> Take it back
+    Newton: I can't. My inventory is full.
+    You tried to give the letter to Newton.
+    ...But his inventory is full.
+    Newton: Told ya.
+-> I will cover it in oil
+    Newton: [emote,2][camshake]Will you now?!
+    Newton: [emote,1]I'll just make another one, then.
+    Newton: [emote,2][camshake]OIL-PROOF!
+<<else>>
+Newton: You already know what to do with this.
+Newton: [emote,1]And by that I mean- give it to Spring.
+Newton: [emote,2][camshake]Hurry!
+<<endif>>
+<<talkspriteFadeOut()>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 10320,11440
+__PrivCrochet_tags: 
+title: teahouse spring about the treehouse
+---
+<<if visitedSelf() == 1>>
+Spring: [emote,1]Ah, it is a place of peace and quiet...
+Spring: It's not often the wonderful teahouse welcomes two... err, three people at once.
+Spring: [emote,0]I spend forever here, pondering upon my existence.
+Spring: And sometimes... making art.
+Spike: That sounds really cool, actually!
+Spring: [emote,4]Of course, "cool". That's what SHE would say.
+Spring: [emote,0]I hope you've been enjoying the treehouse, you two.
+Spike: You could say that.
+Spring: [emote,1]I sense... hesitation.
+Spike: It's nothin, really!
+-> Yep
+    Spring: Ah, my bad. I apologize.
+-> He's hiding something
+    Spring: [emote,2]Why, we can't be doing that here Mr. Spike~
+    Spike: Got nothin to say! Nothin!
+    Spring: [emote,1][spring_anime,0]Teehee!~
+<<else>>
+Spike: Cool house.
+Spring: Thank you.
+Spike: We broke the clock by the way.
+Spring: [emote,7]That kinda sucks.
+Spike: Yeah.
+<<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 11440,11440
+__PrivCrochet_tags: 
+title: teahouse spring music
+---
+<<if visitedSelf() == 1>>
+Spring: You...hear it too?
+Spike: Huh?! Hear what?
+Spring: [emote,1]The music, of course!
+Spike: What music?
+Spring: [emote,0]...the one playing right now!
+Spike: ...
+Spike: I'm hearin the rain.
+Spring: [spring_anime,3][emote,2]That works too...
+Spring: [spring_anime_stop][emote,0]This song, it's...a segment of my very symphony.
+Spring: She calls it...a "character theme". How banal she makes it sound...
+Spring: [emote,4]Why must she compare the glory of life to her little virtual universe?
+Spike: I've got an even better question. Who's [c_yellow]she[/c]!?
+Spring: ...
+Spring: [emote,0]A contact of mine.
+Spring: I know you'll ask, so I...give you the option to.
+<<elseif visitedSelf() == 2>>
+Spring: Feel free to reduce the..."volume slider" to the left to minimize the amplitude of this lullaby.
+Spike: What?!
+Spring: ...I'm not sure.
+Spring: [emote,5]I had a vision. It was a small white cat with a strange tail. It told me about it.
+Spring: Do you know what it means?
+-> Yeah!
+    Spring: [emote,7]That's...interesting.
+-> No...
+    Spring: [emote,0]Ah, why, I just remembered.
+    Spring: This cat said...open your "settings menu" to access it.
+    Spring: [emote,5]I am frightened. Perhaps this cat has lost its mind?
+    Spring: Pay no attention to these words. There is no such thing as a [c_yellow]Save & Quit[/c] button. That is utter nonsense.
+<<else>>
+Spring: How is it?
+Spike: Silent.
+Spring: [emote,1]...right.
+<<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 10880,11440
+__PrivCrochet_tags: 
+title: teahouse spring contacts
+---
+<<if visitedSelf() == 1>>
+Spring: ...
+Spring: My sister...
+Spring: Her name is Summer.
+Spring: [emote,4]That's all you need to know about her.
+<<else>>
+Spring: [emote,4][spring_anime,2]We have nothing to discuss on this topic.
+<<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 27400,11440
+__PrivCrochet_tags: 
+title: well hook
+---
+<<if visitedSelf() == 1>>
+Spike: Yarrrrr!
+Spike: I'm funny.
+<<else>>
+Spike: You're supposed to attach something here.
+<<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 24880,11160
+__PrivCrochet_tags: 
+title: spike book cover
+---
+Spike: Hm...That's a snowglobe.
+Spike: You know what I think will happen in the story?
+Spike: Everything's gonna turn into a holiday wonderland! Snow all over the place!
+Spike: That's like, what snowglobes are for, yeah?
+Spike: ...
+Spike: Nevermind that. That's the dumbest plotpoint I could think of.
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 25160,11160
+__PrivCrochet_tags: 
+title: spike book page 0
+---
+Spike: C'mon, pal!
+Spike: There's nothin interesting in those pages!
+Spike: Unless you're lookin for a secret meaning behind "Season Island".
+Spike: Wait...if you read it backwards, it says...
+Spike: [c_yellow]Dnalsi Nosaes[/c]...
+Spike: Which, by the way, means...[delay,200]absolutely nothing.
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 25440,11160
+__PrivCrochet_tags: 
+title: spike book page 2
+---
+Spike: Huh. The nature of people.
+Spike: Pretty sure the author was isolated.
+Spike: Can't really write about people if you don't meet em, right?
+Spike: Then again, maybe the author was just observin from afar.
+Spike: Kinda like me.
+-> I do that too
+    Spike: Huh! Maybe the author was onto somethin!
+-> I don't do that
+    Spike: Oh well, guess me and the author are just weirdos.
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 25720,11160
+__PrivCrochet_tags: 
+title: spike book page 4
+---
+Spike: ...
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 15080,11160
+__PrivCrochet_tags: 
+title: newton enter shop
+---
+<<talkspriteCreate("newton")>>
+Newton: Welcome, you two.
+Newton: This is my shop. Feel free to look around, but don't get too nosy now.
+Newton: [emote,1]Me casa is not su casa.
+Spike: Alright.
+Newton: [emote,0]Come talk to me if you've got any questions.
+<<talkspriteFadeOut()>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 3600,11440
+__PrivCrochet_tags: 
+title: springflowers topiary shears
+---
+Flowra: Watch out!! We're gonna get killed!
+Follen: Pf, these scissors can't cut through us! We're strong!
+Flowiel: ...We're not that strong, Florn.
+Follen: Oh.
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 4160,11440
+__PrivCrochet_tags: 
+title: springflowers topiary shears superior
+---
+Flowra: Watch out!! We're gonna get killed!
+Follen: Pf, these scissors can't cut through us! We're strong!
+Follen: Then again, these scissors look pretty big.
+Flowiel: Yeah.
+Follen: They can cut.
+Flowiel: Yup.
+Follen: Huh.
+Follen: [shake]PLEASE SPARE US!!
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 3880,11440
+__PrivCrochet_tags: 
+title: springflowers topiary shears legendary
+---
+Flowra: [shake]EEEEEK!
+Follen: C'mon! We ain't done nothin to ya!
+Follen: We're not like the other talking flowers!! Tell em!
+Florn: What "other talking flowers" are you talking about..?
+Follen: That one creepy flower! With the creepy laugh!
+Flowiel: Oh.
+Flowiel: Yeah, we're not like that.
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 27960,11440
+__PrivCrochet_tags: 
+title: well with item
+---
+<<if visitedSelf() == 1>>
+Spike: Cool well.
+<<else>>
+Spike: I think you're supposed to use the hook inside the well, pal.
+<<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 16200,11160
+__PrivCrochet_tags: 
+title: newton shop closed
+---
+<<if visitedSelf() == 1>>
+Spike: Nice-lookin house! Let's look what's inside!
+-> Yeah!!
+    Spike: Let's see now...
+    <<roomMusicFadeOut()>>
+    <<delaySeconds(1)>>
+    Spike: It's uh...
+    Spike: It's locked.
+    <<roomMusicFadeIn()>>
+    Spike: I mean of course it's locked. OF COURSE!!
+-> No...
+    Spike: Tsk, aight, whatever you say.
+<<else>>
+Spike: It's locked, somehow.
+<<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 17600,11160
+__PrivCrochet_tags: 
+title: newton shop watering can full
+---
+Spike: No, we are not watering the house.
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1360,11160
+__PrivCrochet_tags: 
+title: apple tree
+---
+<<if visitedSelf() == 1>>
+Spike: Yummy-lookin apples!
+Spike: I've heard somewhere that some guy was sitting under one of those.
+Spike: And then, [camshake]bam! He's a genius!
+Spike: All because some apple fell on his head!
+Spike: ...
+Spike: Nah that story's definitely made up. That's how they sell more apples.
+Spike: Ugh, I'm sick of apples!!
+<<else>>
+<<random option>>
+->
+    Spike: Apples.
+->
+    Spike: Apels.
+->
+    Spike: Appls.
+->
+    Spike: Alps.
+->
+    Spike: Oranges.
+->
+    Spike: Appls.
+<<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1640,11160
+__PrivCrochet_tags: 
+title: apple tree topiary shears
+---
+Spike: No, we are NOT harvesting apples.
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 2200,11160
+__PrivCrochet_tags: 
+title: apple tree topiary shears superior
+---
+Spike: No, we are still not harvesting apples.
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1920,11160
+__PrivCrochet_tags: 
+title: apple tree topiary shears legendary
+---
+<<if visitedSelf() == 1>>
+Spike: No, we are NOT harvesting apples. Especially not with these expensive-lookin shears!
+<<else>>
+Spike: No apples.
+<<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 12000,11160
+__PrivCrochet_tags: 
+title: knife guy
+---
+<<if visitedSelf() == 1>>
+Spike: Yeah, I know there's a knife guy here!!
+Spike: We gotta stop him, for cryin out loud!!
+<<else>>
+Spike: DO SOMETHIN!!
+<<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 13960,11160
+__PrivCrochet_tags: 
+title: knife guy watering can full fallen
+---
+<<actorHide("newton")>>
+<<if visitedSelf() == 1>>
+Newton: ... ... ...
+Newton: 5 more...minutes...
+Spike: I think he said "5 more minuits".
+Newton: Not what I said.
+<<else>>
+Spike: 5 more minuits.
+Newton: *grumble grumble*
+<<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 12840,11160
+__PrivCrochet_tags: 
+title: knife guy topiary shears fallen
+---
+<<if visitedSelf() == 1>>
+Spike: Careful! He might abruptly wake up and steal your scissors!
+Spike: That guy looks like a skillful thief.
+<<else>>
+Spike: Let's just be glad he's sleeping peacefully.
+<<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 12560,11160
+__PrivCrochet_tags: 
+title: knife guy topiary shears
+---
+<<if visitedSelf() == 1>>
+Spike: He's got a KNIFE!! You can't do nothin with lil scissors!
+<<else>>
+Spike: DO SOMETHIN ELSE!!
+<<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 20960,11440
+__PrivCrochet_tags: 
+title: treehouse lone flower
+---
+<<if visitedSelf() == 1>>
+Spike: Keep it up, lonely flower.
+Spike: ...
+Spike: I don't think this one can talk.
+<<elseif visitedSelf() == 2>>
+Spike: Hiya.
+<<elseif visitedSelf() == 3>>
+Spike: Hey, that's neat.
+Spike: [shake]*sniff [delay,100][shake]sniff*
+Spike: Yep, just as expected.
+Spike: This plant is made out of plant.
+<<elseif visitedSelf() == 4>>
+Spike: Taking care of one sounds soothing.
+Spike: It doesn't do anything but you're here for it!
+Spike: Because it brings you happiness.
+<<else>>
+Spike: What's so special about this flower?
+<<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 22360,11440
+__PrivCrochet_tags: 
+title: treehouse lone flower watering can full oil
+---
+<<if visitedSelf() == 1>>
+Spike: I think you're supposed to use water.
+Spike: You know.
+Spike: Water. As opposed to oil.
+<<else>>
+Spike: That ain't water.
+<<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 21800,11440
+__PrivCrochet_tags: 
+title: treehouse lone flower topiary shears legendary
+---
+<<if visitedSelf() == 1>>
+Spike: Hey! This flower ain't done nothin to you!
+Spike: You havin trouble with a specific flower?
+-> No
+    Spike: Don't cut the poor flower then! It's innocent!
+    Spike: Plus, it's very aesthetic!
+-> Yeah...
+    Spike: Huh, who'd have thought.
+    Spike: Be careful around talkin flowers!
+    Spike: But this one don't talk, so leave it be!
+<<else>>
+Spike: Not cuttin!
+<<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 21520,11440
+__PrivCrochet_tags: 
+title: treehouse lone flower love letter
+---
+<<if visitedSelf() == 1>>
+Spike: I don't think Newton's love interest is a flower.
+Spike: Unless that girl is a flower-human hybrid...
+Spike: But it's uh, not that flower.
+<<else>>
+Spike: Happy valentines to you, lone flower.
+<<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 21240,11440
+__PrivCrochet_tags: 
+title: treehouse lone flower hammer
+---
+Spike: Nope.
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 12280,11160
+__PrivCrochet_tags: 
+title: knife guy fallen
+---
+<<if visitedSelf() == 1>>
+<<actorHide("newton")>>
+Spike: Eeyup.
+Spike: That guy's out cold.
+Spike: Only from an apple, huh?
+Newton: *grunt*...
+Spike: I think I offended him.
+<<else>>
+<<actorHide("newton")>>
+Spike: Hiya, knife guy.
+Newton: ...
+Spike: Goodnight, knife guy.
+<<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 22080,11440
+__PrivCrochet_tags: 
+title: treehouse lone flower watering can full
+---
+You water the lone flower.
+You feel the lone flower smiling at you.
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 22640,11440
+__PrivCrochet_tags: 
+title: treehouse oil pipe newton love letter
+---
+<<if visitedSelf() == 1>>
+Spike: Well, that's one way to deliver a message!
+Spike: To Newton, I mean.
+Spike: A way to say "here's what I think of your stupid letter, idiot!".
+Spike: But seriously, don't do that.
+<<else>>
+Spike: Premium delivery does not involve "getting oil all over the merchandise".
+<<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 6680,11440
+__PrivCrochet_tags: 
+title: teahouse door hint cogs
+---
+Spike: This door looks like it's powered by some sorta mechanism.
+Spike: Uh...seen any mechanism-lookin objects around?
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 7240,11440
+__PrivCrochet_tags: 
+title: teahouse door hint oil
+---
+Spike: Hm...seems like the door's stuck.
+Spike: We need to do somethin about the door hinges. Seen any lubricant around?
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 23200,11160
+__PrivCrochet_tags: 
+title: place down stepladder
+---
+Spike: Hey! Good thinkin!
+Spike: We should be able to reach that weird object in the tree now.
+Spike: Might wanna cut the branches attached to it first though.
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 2760,11160
+__PrivCrochet_tags: 
+title: buried crinoid can reach
+---
+Spike: Hm...That thing's stuck here. Anythin we can use to free it?
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 26840,11160
+__PrivCrochet_tags: 
+title: spring date newton
+---
+<<delaySeconds(1)>>
+<<music("snd_newton")>>
+<<delaySeconds(.5)>>
+<<musicStop()>>
+Spring: [spring_anime,3]Did you hear something?
+Spike: Nope.
+<<springAnimeStop()>>
+<<delaySeconds(1)>>
+<<music("snd_newton")>>
+<<delaySeconds(1)>>
+<<musicStop()>>
+Spring: [spring_anime,4][emote,7]What was that??!
+Spike: The sounds of the city.
+Spring: [emote,0][spring_anime_stop]Oh yea that makes sense.
+<<delaySeconds(1.5)>>
+Spring: [spring_anime,4][emote,7]WAIT A MINUTE WE'RE NOT INSIDE A CITY!!!
+<<music("snd_newton")>>
+<<talkspriteDestroy()>>
+<<talkspriteCreate("newton")>>
+Newton: [camshake][sfx,snd_punch]At last! I have arrived!
+Spring: [shake]AAAAAAAAIIIIIIIIEEEEEE!!
+You hear Spring running to hide.
+Newton: And it seems something has startled you, my love.
+Spring: EEK! A SNOOTLING!! [shake]IN MY PARADISE!!
+Spring: K- keep that infernal CREATURE away from me, S- Spike!!
+Newton: [emote,1]Wait... You...
+Newton: [emote,2]You were dating her just now, weren't you?
+Spike: Were we? Nah, we were just- [delay,100]hanging out! Yeah!
+Spike: No dates here.
+Spring: [shake]WE DATED BY THE WAY!!
+<<emote(1)>>
+<<musicPause()>>
+<<delaySeconds(1.5)>>
+<<musicResume()>>
+Newton: [emote,2]YOU STOLE MY DATE!
+Newton: DID YOU EVEN GIVE HER THE LETTER?!
+Spring: You...you were the one who wrote that letter?
+Newton: [emote,1]Of course I wrote it!
+Spring: DIDN'T YOU TRY TO KILL ME 2 SECONDS AGO??!
+Newton: No I was just threatening you with a knife!
+Spring: YEAH??? THAT'S PRETTY MESSED UP TOO??!
+Newton: You don't- you don't happen to like messed up guys, do you?
+<<musicPause()>>
+<<delaySeconds(1.5)>>
+<<musicResume()>>
+Spring: YOU TRAUMATIZED ME!!
+Newton: [emote,4]Hm... maybe I went a little overboard, huh.
+Newton: [emote,1]Oh well. I can't stay here anyway.
+Spring: GOOD BECAUSE I WAS ABOUT TO EXILE YOU!!
+Newton: I'm already banned from the Spring Paradise though.
+Spring: YEAH WELL... [shake]I'LL BAN YOU EVEN HARDER THIS TIME!!
+Newton: ...
+Newton: Anyways, gotta go now.
+Newton: [emote,3]I got a sweet deal awaiting me at the oasis.
+Newton: Meet me there, if you'd like more useful items!
+Spring: [emote,1]STOP PLACING ADVERTISEMENTS IN MY HOUSE!!
+Newton: [emote,0]Oookay. Gotta go. Goodbye.
+<<talkspriteFadeOut()>>
+<<delaySeconds(1)>>
+<<talkspriteFadeIn("spring",7)>>
+<<springAnime(4)>>
+Spring: Remind me, what is your name?
+Spike: Spike.
+Spring: Your full name, please.
+Spike: Spike. Just Spike. Nothin' else.
+Spring: S- spike, err, might you please go to the desert and...
+Spring: ...ensure this...creature doesn't cause too much trouble?
+Spike: Sure.
+Spring: [emote,5]N- now...now...
+Spring: [emote,0]Right...
+<<springAnimeStop()>>
+<<delaySeconds(.5)>>
+<<jump spring date end>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 20680,11440
+__PrivCrochet_tags: 
+title: treehouse ladder fixed
+---
+The ladder is fixed.
+You can now access the top floor.
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 11440,11160
+__PrivCrochet_tags: 
+title: game start
+---
+[music_fade_in,snd_cabin_rain]Welcome.
+<<delaySeconds(1.5)>>
+As the title suggests, this is a story about seasons.
+A story...about Season Island.
+Don't worry about the "Island" part...It's metaphorical at best.
+As for the "Season" part...
+What could this door have to do with it?
+Your surroundings are quite dark right now.
+There is no trace of nature nearby.
+But it's quite simple, really.
+I think you should ask the gentleman standing in front of you.
+His name is [c_yellow]Spike[/c].
+<<talkspriteFadeIn("spike", 2)>>
+<<delaySeconds(1.5)>>
+Spike: ...
+Spike: Hm, air's gettin colder.
+Spike: ...
+Spike: ...Someone's behind me, ain't that right?
+Spike: You...
+Spike: [emote,4][camshake]Whatcha doin here? Lookin for trouble?
+-> Not at all!
+    Spike: Zzat so? [emote,0]Well, aight then. Makes things easier on both ends.
+    Spike: Especially on yours, [emote,4][camshake]cuz I can THROW a good punch!!
+    Spike: Although...I've never actually...punched anyone, really.
+    Spike: [emote,1]So don't force me to, aight?
+-> You betcha
+    Spike: [camshake]ZZAT SO?!
+    Spike: [emote,1]...[delay,200][emote,5]I don't feel like it, to be honest.
+    Spike: Come back when I'm in a better mood, pal.
+-> What?!
+    Spike: Huh? Well I just- [emote,0][camshake]I dunno, you seemed dangerous for a moment.
+    Spike: [emote,1]You look weird! I mean, no offense.
+    Spike: You look...like...super detailed? [emote,0]Kinda freaked me out.
+Spike: [emote,8]...
+Spike: [emote,0]Youse a weirdo, you know?
+Spike: [emote,1]Entering some abandoned cabin in the woods.
+Spike: Not only that but you look like you're lookin to find SOMETHING in here too.
+Spike: Zzat right?
+-> Yeah
+    Spike: [emote,6]KNEW IT!!
+    Spike: [emote,0]...I mean, yeah. Anyone would know.
+    Spike: [emote,5]Sorry it's just...err...
+-> No
+    Spike: ...
+    Spike: [emote,0]Kinda rude to take me for an idiot, y'know?
+    Spike: [emote,5]Not that it's anything new to me...I guess...
+Spike: [emote,0]Aight. Spit it. Whatcha lookin for?
+-> Season Island
+    Spike: ...
+Spike: ...[emote,7][music_fade_out]Season Island.
+Spike: ...
+Spike: Wait...there's [c_yellow]that book[/c]...
+Spike: It's unpublished.
+Spike: And the only place it exists at is...
+Spike: [emote,1]...
+Spike: [emote,8][music_fade_in,snd_book]In this very cabin.
+Spike: [emote,0]You'd think I have read through it, huh?
+Spike: Ain't my first time here, and yet...
+Spike: Can't get past the "About the author" section. Something about it don't sound right.
+Spike: It's like I'm readin something I shouldn't be reading.
+-> Tell me more
+    Spike: [emote,8]You're awfully curious bout that, huh.
+    Spike: [emote,9]I don't blame ya! Stuff's crazy weird.
+-> It can't be that bad!
+    Spike: I think it is.
+Spike: [emote,0]People say the author mysteriously disappeared after writing that book.
+Spike: Woosh! Vanished! Just like that.
+Spike: But...no one actually knows who "vanished".
+Spike: [emote,1]We know it's someone who lived alone for a while.
+Spike: You'd think the author at least signed that book, yeah?
+Spike: [emote,7]Nothin of the sort. Like that author didn't want to be recognized.
+Spike: [emote,9]Makes you wonder, huh? *How* bad could this book possibly be?!
+Spike: [emote,0]...
+Spike: Nah. It's dangerous. That's what it is. That' why nobody goes looking for it.
+Spike: [emote,1]Someone brought you here for [c_yellow]that thing[/c], right? Can't be any old book.
+Spike: [emote,0]I'll go get it for ya.
+<<talkspriteFadeOut("spike")>>
+Spike: Hmm...where's that thing at...
+Spike: Oh!
+Spike: [camshake]Yep. That's the one!
+Spike: Here it comes!
+<<bookCreate()>>
+Spike: Theere we go.
+Spike: Aight, pal.
+Spike: You do that. I'll just be over there. Ponderin.
+Spike: See ya!
+<<delaySeconds(1)>>
+Spike: I'm... walkin away! To my corner! To be all by m'self! Yeppers!
+<<delaySeconds(1)>>
+Spike: Uh, before I go, need anythin?
+-> Nope
+    Spike: Aight!
+    Spike: I'll be goin now!
+-> Just go already!
+    Spike: Sheesh, okay! I'm goin!
+-> More tea please
+    Spike: I don't got that here, sorry.
+    Spike: Anyways. Right. Pondering. I'll go now.
+<<delaySeconds(1)>>
+Spike: ...Okay fine I'm too curious for my own good.
+Spike: I don't wanna be readin it, but like... [delay,200][camshake]what's in there?! How am I gonna know?!
+-> Care to join?
+    Spike: ...I mean.
+    Spike: If YOU insist. I guess. You did this!
+-> It's mine now!
+    Spike: Heh, wish I could say the same.
+    Spike: But this book ain't got no owner.
+-> You shouldn't know
+    Spike: That's really ominous.
+    Spike: You're makin me even more curious! This is your fault, pal!
+Spike: Whatever.
+Spike: Aight. Let's see what's in there.
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 3600,11160
+__PrivCrochet_tags: 
+title: buttermantis
+---
+<<if visitedSelf() == 1>>
+Buttermantis: I'm flyin! Like a bird!
+Buttermantis: How do you fly anyway?
+-> Metaphorically
+    Buttermantis: Wuhhh?!
+    Buttermantis: That's cheating! You're supposed to use REAL wings! Not metaphorical ones!!
+-> In a big metal bird
+    Buttermantis: Waaaaw!
+    Spike: It's called "plane".
+    Buttermantis: Such a handsome bird...Do you think Plane likes praying mantises? And butterflies?
+    Buttermantis: (I'm a little bit of both myself!~)
+    Spike: No.
+-> By falling
+    Buttermantis: Woa....Can you teach me?
+    Spike: Step one
+    Spike: Stop flyin.
+    Buttermantis: Too difficult......
+<<else>>
+Buttermantis: I'm flyin! Like a bird!
+Buttermantis: Quit botherin me! Ya hear?!
+<<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 5000,11160
+__PrivCrochet_tags: 
+title: buttermantis stepladder
+---
+<<if visitedSelf() == 1>>
+Buttermantis: Hi!
+Spike: Hiya.
+Buttermantis: There's a shiny object in this TREE over there...
+Spike: Yep.
+Buttermantis: But I can't...take it! It's trapped!
+Spike: Mhm.
+Buttermantis: But...you can't even reach it yourself...because you can't FLY...
+Spike: Pretty much.
+Buttermantis: If only you had some...sort of ladder...that you could place UNDER the TREE...
+Spike: That's true.
+<<else>>
+Buttermantis: I wonder what a stepladder looks like.....
+Spike: Ladder. But short.
+Buttermantis: I wonder what a ladder looks like.....
+Spike: Stepladder. But tall.
+Buttermantis: Ohhhhhhhhhhhhh! So that's what a stepladder looks like!
+<<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 14800,11440
+__PrivCrochet_tags: 
+title: treehouse
+---
+Spike: Well, here we are.
+Spike: Hm.
+Spike: Guess [c_fuchsia]she[/c]'s behind that door just here.
+Spike: ...But it won't budge.
+-> Try knockin
+    Spike: Alright!
+    *[sfx,snd_punch][camshake]knock [delay,30][sfx,snd_punch][camshake]knock [delay,30][sfx,snd_punch][camshake]knock*
+    Spike: ...
+    Spike: Nothin. Maybe she got busy.
+-> Try shouting
+    Spike: [camshake][shake]SPRIIIIIIIIIIIING! WE'RE HEEEEEEEEEERE!!
+    Spike: ...
+    Spike: Nothin. Must be soundproof.
+Spike: Let's try to un-stuck that door then.
+Spike: We can look around for stuff.
+Spike: And [c_yellow]move[/c] if necessary.
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 24320,11160
+__PrivCrochet_tags: 
+title: pompom wrong item
+---
+Pompom: Cool item!
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 3880,11160
+__PrivCrochet_tags: 
+title: buttermantis crinoid
+---
+<<if visitedSelf() == 1>>
+Spike: Hey, we got the object from that tree over there.
+Spike: It's this...shiny-lookin stone.
+Buttermantis: Why...is this...[shake]GASP!!
+Buttermantis: IT'S A CRINOID! [shake]AAAIIIEEEEE!!
+Spike: What's the matter?!
+Buttermantis: Get rid of this object [shake]IMMEDIATELYYYYY!
+Buttermantis: (fear)
+Spike: Oh, okay. Gotcha.
+Spike: (confusion)
+<<else>>
+Buttermantis: G- [delay,150][shake]get this away from meeee!!
+<<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 5280,11160
+__PrivCrochet_tags: 
+title: buttermantis wrong item
+---
+Buttermantis: WOAH!! IS THAT...
+Buttermantis: Teehee! No I um, I don't know what that is. Sorry.
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 15920,11160
+__PrivCrochet_tags: 
+title: newton refund
+---
+<<talkspriteFadeIn("newton")>>
+<<if visitedSelf() == 1>>
+Newton: You want a refund?
+-> Yes
+    Newton: [emote,1]Too bad.
+-> No
+    Newton: Good. I don't do refunds.
+<<else>>
+Newton: ...
+Newton: [emote,1]No refunds.
+<<endif>>
+<<talkspriteFadeOut()>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 27960,11160
+__PrivCrochet_tags: 
+title: spring enter teahouse
+---
+<<talkspriteFadeIn("spring")>>
+<<if $is_spring_upset>>
+Spring: [emote,4]Ah. Hello, you two.
+Spike: Listen, we're sorry about earlier!
+Spike: We'll have tea with ya! No need to get upset now.
+Spring: [emote,0][spring_anime,0]Y- you will?
+-> Yes
+    Spring: Why, thank you! Suit yourselves.
+-> No!!
+    Spike: AS I WAS SAYIN, we gladly will!
+    Spring: [emote,4]...
+    Spring: [emote,2]Thank you, Spike.
+    Spring: As for you...[delay,100][emote,3][spring_anime,2]Suit yourself, will ya?
+<<else>>
+Spring: [emote,1][spring_anime,0]H- happy to see you, Spike.
+Spring: [emote,0]I've prepared everything!
+Spike: Thanks! Very pretty-lookin spot you have here!
+Spring: [emote,2]Thank you, lovely~!
+Spring: Oh and, have as many cookies as you like. In fact, I want you to eat every single one of them.
+Spike: Hohoho! Don't mind if I do!
+<<endif>>
+Spring: [spring_anime_stop][emote,0]Come talk to me if you need anything!
+Spring: I will be touching grass.
+Spike: Touching grass?
+Spring: Touching grass.
+<<talkspriteFadeOut()>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 11720,11440
+__PrivCrochet_tags: 
+title: teahouse spring newton
+---
+Spring: ...
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 26560,11160
+__PrivCrochet_tags: 
+title: spring date end
+---
+<<music("snd_spring")>>
+Spring: Thank you...Spike.
+Spring: I have felt lonely for so long, but...
+Spring: [emote,1]Today felt special. I finally had an actual date! Unbelievable!
+Spring: [emote,0]It's...quite sad to see my dream end so soon...
+Spike: End? Whatcha mean by that?
+<<musicFadeOut()>>
+Spring: [emote,5]I- I must've forgotten to tell you, haha.
+Spring: My creatures are...they're...
+Spring: I hear they're getting sick.
+Spring: [emote,4]It's usually easy to heal them, but this time, it's...I just...*sigh*
+Spring: [emote,0]I must go and take care of them now.
+Spring: It's been a pleasure, Spike.
+Spring: [emote,1]I hope I'll see you again soon.
+<<talkspriteFadeOut()>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 22920,11160
+__PrivCrochet_tags: 
+title: newton topiary shears
+---
+<<talkspriteFadeIn("newton")>>
+<<if visitedSelf() == 1>>
+Newton: Neat. Topiary shears.
+Newton: [emote,1]I own better pairs.
+Spike: Whatcha use em for?
+Newton: [emote,0]Showing off.
+Spike: Yeah that checks out.
+<<else>>
+Newton: Your item sucks. I have better items.
+Spike: Yeah that checks out.
+<<endif>>
+<<talkspriteFadeOut()>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 4160,11160
+__PrivCrochet_tags: 
+title: buttermantis crinoid big
+---
+Buttermantis: [shake]EEEEEEEEEEEK!!
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 13680,11440
+__PrivCrochet_tags: 
+title: teahouse tea set no spring
+---
+It's useless now.
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 6960,11440
+__PrivCrochet_tags: 
+title: teahouse door hint move teahouse
+---
+The door is unlocked.
+You now have access to the teahouse.
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 24560,11160
+__PrivCrochet_tags: 
+title: slingshot
+---
+<<roomMusicPause()>>
+<<showSlingshot()>>
+[sfx,snd_powerup]You can now use the [c_lime]SLINGSHOT![/c]!
+Press the mouse button on it and aim with the mouse!
+Release the mouse button to shoot a pebble!
+You can throw an infinite amount of pebbles.
+<<roomMusicResume()>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 25720,11440
+__PrivCrochet_tags: 
+title: treehouse pipe no oil
+---
+<<if visitedSelf() == 1>>
+Spike: Hmm, seems there ain't any oil comin from this pipe.
+Spike: Might wanna look for a different pipe.
+<<else>>
+Spike: No oil here.
+<<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 24600,11440
+__PrivCrochet_tags: 
+title: treehouse pipe
+---
+Spike: Pipe.
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 24880,11440
+__PrivCrochet_tags: 
+title: treehouse pipe broken
+---
+Spike: Pipe brocken.
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 16200,11440
+__PrivCrochet_tags: 
+title: treehouse clock topiary shears legendary
+---
+<<if visitedSelf() == 1>>
+Spike: Why are ya trying to cut this clock?
+Spike: It's a waste of time!
+-> That was funny
+    Spike: Huh? I don't get it.
+-> That was not funny
+    Spike: Did I tell a joke on accident?!
+Spike: Anyways, we can't pull the mechanism out of the clock.
+Spike: We need somethin more powerful!
+<<else>>
+Spike: Still can't pull the mechanism out of the clock.
+<<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 15640,11440
+__PrivCrochet_tags: 
+title: treehouse clock newton love letter
+---
+<<if visitedSelf() == 1>>
+<<roomMusicFadeOut()>>
+Tere: Interesting.
+<<music("snd_shore")>>
+Tere: Hi, I'm the developer.
+Tere: I see you're trying to use a love letter on a clock.
+Tere: Now, it appears you may be running out of ideas on what to do. This is fine.
+Tere: Or maybe you were expecting a joke to spawn from such a humorous idea.
+Tere: Here, I have come up with a joke, before writing this text.
+Tere: To use a love letter on a clock could imply the following...
+Tere: It's...[delay,300][c_yellow]reading[/c] time!
+<<musicStop()>>
+<<delaySeconds(1.5)>>
+Tere: Yeah that's the whole joke.
+<<roomMusicFadeIn()>>
+<<else>>
+Spike: I don't think the envelope fits inside.
+<<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 16760,11160
+__PrivCrochet_tags: 
+title: newton shop topiary shears
+---
+<<if visitedSelf() == 1>>
+Spike: You must really like apples if you're trying to harvest the biggest one, huh?
+<<else>>
+Spike: This is a house, pal.
+<<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 17320,11160
+__PrivCrochet_tags: 
+title: newton shop topiary shears superior
+---
+Spike: Buddy. This isn't an actual apple.
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 17040,11160
+__PrivCrochet_tags: 
+title: newton shop topiary shears legendary
+---
+Newton: [camshake]WHAT ARE YOU TWO TRYING TO DO?!
+Spike: I DUNNO, ASK THE OTHER PERSON!
+Newton: [camshake]QUIT IT! THIS IS MY HOUSE!
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 16480,11160
+__PrivCrochet_tags: 
+title: newton shop spring in danger
+---
+Spike: Not now!!
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 7520,11160
+__PrivCrochet_tags: 
+title: cherug spring in danger
+---
+Cherug: Gwahhh!! Spring! Over there! With KNIFE GUY!!
+Cherug: He's not doing anything... but he looks dangerous while doing it!!
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 3040,11440
+__PrivCrochet_tags: 
+title: springflowers spring in danger
+---
+<<if visitedSelf() == 1>>
+Flowra: Eeek!! Spring is in danger!!
+Follen: Do something! Do something with the... with the vine we gave you!
+Flowiel: Yeah, use your new vine powers.
+Flowra: Take this more seriously, Flowiel!
+Flowiel: Sorry, sorry.
+<<else>>
+Flowiel: Cool slingshot.
+Spike: Thanks.
+Flowiel: You should really use it.
+Spike: Gotcha.
+<<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 5840,11160
+__PrivCrochet_tags: 
+title: cherug after talking to spring
+---
+<<if visitedSelf() == 1>>
+Cherug: Our mother... she's so powerful!
+Cherug: She can fix many creatures!
+Cherug: Do you think she can... fix me?
+<<else>>
+Cherug: ...
+<<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1920,11440
+__PrivCrochet_tags: 
+title: springflowers after talking to spring
+---
+<<if visitedSelf() == 1>>
+Flowra: Isn't she wonderful?
+Follen: Ain't she beautiful?
+Flowrie: SO PRETTYYYY!
+Fleur: Oh, mother. She's so good at what she does.
+Fleur: ...
+Fleur: ...is what I would say if she still had it.
+Flowra: Florn? Is everything alright?
+Florn: ...I don't...know...
+<<else>>
+Florn: ...I think I'm feeling sick...
+Florn: Am I going to be alright, Follen..?
+Follen: O- of course! Spring always finds a way!
+<<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 4720,11440
+__PrivCrochet_tags: 
+title: springflowers watering can
+---
+<<if visitedSelf() == 1>>
+Follen: Yum yum, air! I love to drink air!
+Flowra: What no we don't drink air?!
+Flowiel: Well, guess that's what these two want us to do.
+Flowiel: Drink up, everyone!
+The springflowers pretend to be watered.
+Follen: This kinda sucks.
+Florn: Yeah.
+<<else>>
+Flowiel: Not funny. Didn't laugh.
+Follen: Not laugh. Didn't funny.
+Fleur: Not water. Didn't drink.
+<<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 8640,11160
+__PrivCrochet_tags: 
+title: cherug watering can full
+---
+<<if visitedSelf() == 1>>
+Cherug: Gasp! You got me to fix it so that you can hydrate me with it?!
+Cherug: You're so... NICE!!!
+The cherug tries to lick your face.
+Cherug: Woah woah easy there!
+<<else>>
+Cherug: Feelin fresh!
+<<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 8360,11160
+__PrivCrochet_tags: 
+title: cherug watering can
+---
+<<if visitedSelf() == 1>>
+Cherug: The watering... can!
+Spike: Good joke. I like it.
+Cherug: But right now it can't, because there's no water in it...
+Cherug: There's a well over there... you can fill the watering can with it!
+Spike: Thanks.
+<<else>>
+Cherug: Use the well to fill the watering can!
+Cherug: It won't break!
+Spike: The watering can?
+Cherug: No, silly! The well!
+Cherug: ...
+Cherug: [camshake]Oh yeah! The watering can won't break either!
+<<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 8080,11160
+__PrivCrochet_tags: 
+title: cherug stepladder
+---
+<<if visitedSelf() == 1>>
+Cherug: Ladder!
+Spike: Stepladder.
+Cherug: Ladder!
+Spike: Stepladder.
+Cherug: What's the difference??!?
+Spike: Ladder takes more time to fix.
+Cherug: Can you show me how to fix a... a ladder?!
+Spike: I guess if I ever have to fix one.
+Cherug: Will you fix it with your saliva?!
+Spike: No, uh, I got hands. I can fix things with my hands.
+Cherug: Nevermind! That sounds boring!!
+<<else>>
+Cherug: S... stopladder.
+Spike: Not exactly.
+<<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 5000,11440
+__PrivCrochet_tags: 
+title: springflowers watering can asleep
+---
+Spike: I don't think flowers drink air.
+Spike: But maybe I'm wrong.
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 13680,11160
+__PrivCrochet_tags: 
+title: knife guy watering can full
+---
+<<actorHide("newton")>>
+Newton: [camshake]Don't try to distract me now!
+Spike: Thanks for not killing us!
+Newton: Quit it! You're ruining the mood!
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 18160,11440
+__PrivCrochet_tags: 
+title: treehouse entrance branches watering can full
+---
+Spike: What are you doin!? These vines are already sturdy enough!
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 12280,11440
+__PrivCrochet_tags: 
+title: teahouse spring newton love letter wet
+---
+<<talkspriteFadeIn("spring")>>
+<<if visitedSelf() == 1>>
+Spike: I uh, got somethin' for ya.
+Spring: Hm?
+[c_yellow]Mistake[/c] handed to Spring.
+Spring: [emote,7][spring_anime,3]Uh... What am I looking at?
+Spike: Envelope.
+Spring: How did it get uh... wet?
+Spike: Water.
+Spring: Uh huh. I see.
+Spring opens the letter VERY carefully.
+Spike: Is everything alright?
+Spring: It's fine! Really! Mistakes happen!
+Spring: [emote,1]...alright! Let's see what's in there!
+<<springAnimeStop()>>
+<<hop teahouse spring read newton love letter>>
+<<springAnime(0)>>
+<<endif>>
+<<jump teahouse spring ask date>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 4440,11160
+__PrivCrochet_tags: 
+title: buttermantis newton love letter
+---
+<<if visitedSelf() == 1>>
+Buttermantis: Oh my..! A luv letter?!
+Buttermantis: For meeeeeeeee?!?!
+-> Of course not
+    Buttermantis: Not fair! I want to meet boys! I want to meet boooooys!!!
+    Spike: Not with that attitude you won't!
+    Buttermantis: M- maybe so...
+-> Yeah, of course!
+    Buttermantis: Gasp! Reallyyyy?!?!?
+    Spike: [camshake]No.
+    Buttermantis: [shake]Waaaaaaaa!!
+<<else>>
+Buttermantis: [shake]*wimper*
+<<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 4720,11160
+__PrivCrochet_tags: 
+title: buttermantis newton love letter wet
+---
+<<if visitedSelf() == 1>>
+Buttermantis: Gasp! Is that...a love letter??!
+Buttermantis: ...
+Buttermantis: I don't want it...
+<<else>>
+Buttermantis: Ew! Get this away from mehhh!
+<<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 6960,11160
+__PrivCrochet_tags: 
+title: cherug newton love letter
+---
+Cherug: Food!
+Cherug: *slurp*
+Cherug: Tastes like apples!
+Spike: No wonder!
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 7240,11160
+__PrivCrochet_tags: 
+title: cherug newton love letter wet
+---
+Cherug: Food!
+Cherug: *slurp*
+Cherug: Tastes like mistake.
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 23760,11160
+__PrivCrochet_tags: 
+title: pompom newton love letter
+---
+<<if visitedSelf() == 1>>
+Pompom: Why... ohoho...
+Pompom: It was that furball who made this, right?
+Pompom: And for... me, I presume?
+Spike: Your name isn't Spring, right?
+Pompom: No, it's Pompom- ah, I see. It's for her.
+Pompom: It's... err... an interesting... date idea.
+Pompom: I won't judge! I just hope things don't get too... haha...
+Pompom: Don't worry about me. Waddle on!
+<<else>>
+Pompom: Don't worry too much about this! I'll do the worrying for you.
+<<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 24040,11160
+__PrivCrochet_tags: 
+title: pompom newton love letter wet
+---
+<<if visitedSelf() == 1>>
+Pompom: Cool... item?
+Pompom: ...
+Pompom: Ah, this must be some sort of mistake. Sorry.
+<<else>>
+Pompom: Why would you do this to him?
+<<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 2480,11440
+__PrivCrochet_tags: 
+title: springflowers newton love letter
+---
+<<if visitedSelf() == 1>>
+Flowra: Oh my!!~ Who's that for?!
+Fleur: Eugh... A love letter. Keep this away from me.
+Follen: Heh, ain't seen anybody date in Spring's paradise like... ever!
+Flowiel: I hear Spring keeps her tea set around. Just in case she ever needs it.
+Flowiel: Maybe that letter's for her.
+Fleur: Oh please.
+Flowiel: You never know, Fleur. This is a fairytale. [delay,200]This place, I mean.
+Flowra: Yeah! Anything is possible! You just have to...find like...a shooting star and...
+Flowiel: Not the shooting stars please[continue]
+Florn: P... please don't mention those[continue]
+Flowrie: [shake]EEEEK THE SHOOTING STARS[continue]
+Follen: H- haha! Shooting stars don't even exist right??![continue]
+Fleur: ...right. We don't talk about those.
+<<else>>
+Fleur: Shooting stars...no, stars in general.
+Flowiel: Stars are bad news here.
+Flowrie: [shake]Every star... Especially the moving ones...
+<<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 2760,11440
+__PrivCrochet_tags: 
+title: springflowers newton love letter wet
+---
+<<if visitedSelf() == 1>>
+Flowra: What is this thing?
+Flowiel: A mistake.
+Fleur: Mistake.
+Florn: Mistake...
+Flowrie: MI STEAK
+Follen: Mix tape
+<<else>>
+Follen: Mistakes were made.
+<<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 25160,11440
+__PrivCrochet_tags: 
+title: treehouse pipe broken watering can
+---
+<<if visitedSelf() == 1>>
+Spike: Can't fill the can like that! The pipe's shape is all wrong.
+Spike: Guess you could call this a... "watering can't".
+<<else>>
+Spike: No "can" do.
+<<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 25440,11440
+__PrivCrochet_tags: 
+title: treehouse pipe fill watering can with oil
+---
+The watering can has been filled with oil.
+It transformed into an "oil can".
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 7800,11440
+__PrivCrochet_tags: 
+title: teahouse door newton love letter
+---
+<<if visitedSelf() == 1>>
+You try to slip the love letter under the door.
+Spring: Oh my! Someone dropped this...
+Spring slips the love letter under the door back to you.
+<<else>>
+Spike: You tried.
+<<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 24320,11440
+__PrivCrochet_tags: 
+title: treehouse painting watering can full
+---
+The water is repelled by the painting.
+It appears to be covered in some water-resistant material.
+Spike: Woah! That's kinda cool!
+Spike: It's like she knew someone would try to ruin her paintings!
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 24040,11440
+__PrivCrochet_tags: 
+title: treehouse painting topiary shears legendary
+---
+<<if visitedSelf() == 1>>
+Spike: Wait... do you think there's some hidden treasure behind the painting?!
+-> Yes, absolutely
+    Spike: Heh... Good thinkin.
+    Spike: Let's not steal it though... Maybe there's a trap somewhere too!
+-> No I just want to rip it apart
+    Spike: Youse either bein honest or messin with me!
+    -> Honest
+        Spike: I'll be honest too then. I think this is a horrible thing to do!
+    -> Hornet
+        Spike: Not how you spell it.
+<<else>>
+Spike: Snip snip.
+Spike: Woah! A golden coin!
+Spike: Here, I hope my play pretend helped you feel satisfaction.
+<<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 9200,11440
+__PrivCrochet_tags: 
+title: teahouse flowers topiary shears legendary
+---
+You cut the flowers.
+But they regenerated instantly.
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 14240,11440
+__PrivCrochet_tags: 
+title: teahouse vine flowers
+---
+The pink flower and the yellow flower are far apart.
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 8080,11440
+__PrivCrochet_tags: 
+title: teahouse door newton love letter wet
+---
+<<if visitedSelf() == 1>>
+You try to slip the love letter under the door.
+Spring: ...
+Spring: I'm not... sure what this is...
+Spring slips the love letter under the door back to you.
+<<else>>
+Spike: I don't think she recognized it.
+<<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 8640,11440
+__PrivCrochet_tags: 
+title: teahouse flowers newton love letter
+---
+Spike: Nope, that's not Spring.
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 8920,11440
+__PrivCrochet_tags: 
+title: teahouse flowers newton love letter wet
+---
+<<if visitedSelf() == 1>>
+Spike: Ohh I see.
+Spike: You're watering the flowers with the letter.
+Spike: Clearly efficiency isn't your biggest concern now.
+<<else>>
+One drop falls from the envelope and onto the flower.
+<<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 15640,11160
+__PrivCrochet_tags: 
+title: newton newton love letter wet
+---
+<<if visitedSelf() == 1>>
+<<talkspriteFadeIn("newton", 2)>>
+Newton: Are you [camshake]kidding me??!
+Newton: Is this your idea of a "delivery"!?
+Newton: [emote,1]I'll just- [delay,200][camshake][emote,2]You stay right here. I'll go get another one.
+<<talkspriteFadeOut()>>
+<<delaySeconds(1)>>
+<<talkspriteFadeIn("newton", 1)>>
+Newton: Here.
+Newton: [emote,2]Be careful this time!!
+<<talkspriteFadeOut()>>
+<<else>>
+<<talkspriteFadeIn("newton", 1)>>
+Newton: Real funny.
+Newton: [emote,2][camshake]Take this copy and go do your job.
+<<talkspriteFadeOut()>>
+<<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 12560,11440
+__PrivCrochet_tags: 
+title: teahouse spring read newton love letter
+---
+Spring holds the letter with her two hands.
+She reads the beginning slowly.
+Her reading speed accelerates as she begins frowning.
+Her eyes begin to open wide, now looking closely at the letter, frowning even further.
+[emote,7][camshake]Her eyes are completely widened, now reaching the end of the letter.
+She finishes reading it and looks at Spike in shock.
+Spring: [spring_anime,1]O- [delay,200]oh my goodness!!~ [spr_music_note]
+Spring: This changes just about [shake]everything!
+Spike: That's good! I think.
+Spike: So uh, your date[continue]
+Spring: [emote,2]Is [c_yellow]you[/c].
+Spike: Huh?
+Spring: [emote,1]Shall I remind you of your own lovely letter?~
+Spring: [emote,0]"Dear Spring,[/page]I will be at the Treehouse shortly, waiting to meet with your beautiful self.[/page]As an admirer of yours, I must confess my love to you.[/page]-signed, Anonymous"
+Spike: [emote,1]...
+Spike: [camshake](WHY'D THAT IDIOT NOT SIGN IT PROPERLY?!)
+Spring: [spring_anime_stop][emote,2]I see you're quite flustered!
+Spring: Hehe... I too must confess...
+Spring: [spring_anime,0][emote,1]I seem to have fallen head over heels for you!
+Spring: [emote,2]You gentleman you~
+Spring: [emote,3]YOU [camshake][shake]PIECE OF WORK!!
+Spike: M- [delay,100]me? But the letter-
+Spring: [emote,1]Why, I quite enjoyed it, naturally!
+Spring: [emote,1]Well? Shall we proceed with our date?~
+Spike: I mean[continue]
+Spring: [shake][emote,6][spring_anime_stop]THAT'S SUCH A WEIRD WAY TO SAY "YES"!!
+Spring: [emote,0]Oh and, you, the other person.
+Spring: You can...err...oh!
+Spring: [emote,1]You can guard the exit! Make sure no rodents get inside!
+-> Sure
+    Spring: Thank you!
+-> Ew no
+    Spring: [emote,6][shake][camshake]SO ANYWAY.
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 10600,11440
+__PrivCrochet_tags: 
+title: teahouse spring ask date
+---
+Spring: [emote,2]Are we ready, my prince?~
+<<roomMusicFadeOut()>>
+Spike: (Do ya think I'm ready?!)
+-> Not really
+    <<roomMusicFadeIn()>>
+    Spring: [emote,1]M- me neither, haha...
+-> Yeah!
+    <<jump spring date>>
+<<talkspriteFadeOut()>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 9480,11160
+__PrivCrochet_tags: 
+title: demo
+---
+<<if visitedSelf() == 1>>
+Tere: Thank you for playing.
+Tere: This is only a demo of the full thing!
+Tere: Check out the full game, if it's out!
+Tere: Aside from that...there's not much else to this demo.
+Tere: WELL...
+Tere: You can always look for easter eggs! Everybody loves easter eggs, right?
+Tere: Press the scary "delete" button on the titlescreen and give chapter 1 another go!
+Tere: Or play chapter 2 in the full game!
+Tere: Or close the game and come back to this room for more nothing.
+<<elseif visitedSelf() == 2>>
+Tere: Oh hey, you're back!
+Tere: I'm tellin you! There's nothing else here!
+Tere: No easter eggs in this room!
+<<delaySeconds(2)>>
+Tere: However...
+Tere: There's somethin you could try on the titlescreen.
+Tere: If you say "meow"- and I don't necessarily mean "say" in a literal sense but-
+Tere: If you say "meow" on the titlescreen...maybe...
+Tere: Ah, sorry, I gotta go right now.
+Tere: Remember! Say "meow"!
+<<else>>
+Tere: Meow.
+<<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 13400,11160
+__PrivCrochet_tags: 
+title: knife guy watering can fallen
+---
+Spike: Yum yum, a healthy dose of air.
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 13120,11160
+__PrivCrochet_tags: 
+title: knife guy watering can
+---
+Spike: What are you trying to do?!
+Spike: Knock him out with a watering can?!
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 26560,11440
+__PrivCrochet_tags: 
+title: treehouse rope topiary shears legendary
+---
+<<if visitedSelf() == 1>>
+You cut a piece of the rope.
+You got the piece of rope! You can use it to attach things!
+...But it's useless here, so you decide to reattach the rope to itself.
+Spike: Huh, how'd you do that?
+<<else>>
+Rope.
+It's useless here.
+<<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 26280,11440
+__PrivCrochet_tags: 
+title: treehouse rope
+---
+Rope.
+Presumably used to decorate.
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 19280,11440
+__PrivCrochet_tags: 
+title: treehouse entrance hanging stars
+---
+<<if visitedSelf() == 1>>
+The hanging stars emit a faint glow.
+Spike: Huh, that's weird.
+Spike: I'm seeing the stars glow.
+Spike: But...this isn't supposed to be possible, right?
+Spike: Where's that light coming from?
+<<else>>
+Spike: ...weird.
+<<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 19840,11440
+__PrivCrochet_tags: 
+title: treehouse entrance hanging stars topiary shears
+---
+<<if visitedSelf() == 1>>
+Spike: Hey! I kinda like these stars! They look pretty.
+Spike: If you wanna take a look at a fallen star, there's one over to the right.
+<<else>>
+Spike: Not here.
+<<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 18440,11440
+__PrivCrochet_tags: 
+title: treehouse entrance hanging star fallen
+---
+A fallen star.
+You feel it smiling eerily.
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 19000,11440
+__PrivCrochet_tags: 
+title: treehouse entrance hanging star fallen topiary shears
+---
+You can't make a star fall even further.
+Not here, at least.
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 5560,11440
+__PrivCrochet_tags: 
+title: stepladder
+---
+<<if visitedSelf() == 1>>
+It's a stepladder. For stepping.
+As opposed to a ladder, for climbing.
+Spike: Ohhhh.
+<<else>>
+There is not much to say about this stepladder.
+<<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 5840,11440
+__PrivCrochet_tags: 
+title: stepladder watering can full
+---
+The stepladder is now slippery.
+You wait for it to dry.
+<<roomMusicFadeOut()>>
+<<delaySeconds(3)>>
+<<roomMusicFadeIn()>>
+The stepladder is now dry.
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 15920,11440
+__PrivCrochet_tags: 
+title: treehouse clock newton love letter wet
+---
+<<if visitedSelf() == 1>>
+<<roomMusicFadeOut()>>
+Tere: Interesting.
+<<music("snd_shore")>>
+Tere: Hi, I'm the developer.
+Tere: I don't know what you're trying to do, but...
+Tere: Maybe you're simply confused. A little lost, even.
+Tere: I will give you a hint, then.
+<<delaySeconds(1.5)>>
+Tere: Using a wet love letter on a clock is not going to solve the puzzle.
+<<musicStop()>>
+<<roomMusicFadeIn()>>
+<<else>>
+Spike: I don't think that's gonna do anything.
+<<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 15080,11440
+__PrivCrochet_tags: 
+title: treehouse ceiling fan
+---
+It's a suspiciously cog-shaped fan.
+Spike: Interesting.
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 26000,11440
+__PrivCrochet_tags: 
+title: treehouse pipe watering can full
+---
+The watering can is full. You cannot fill it with oil.
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 7520,11440
+__PrivCrochet_tags: 
+title: teahouse door knock
+---
+<<if visitedSelf() == 1>>
+Spring: W- who's there?!
+Spike: YOUR [camshake]DATE!!
+Spring: Huh?!
+Spike: YOUR [delay,500][camshake]DATE!!!! YOUR DATE IS HERE!!
+Spring: Uh...right...
+Spring: Your voice is a little muffled, sir. I can't hear you...
+Spike: Oh you've gotta be kiddin me!
+<<elseif visitedSelf() == 2>>
+Spring: Who's there?!
+Spring: I thought I blocked off this entrance...
+Spring: Sir, you might want to take the shortcut!
+Spike: THERE'S A SHORTCUT?!
+Spring: Huh?
+Spike: WHAT?
+Spring: Huh?
+Spike: I don't think she's hearing us.
+Spike: But- [delay,500][camshake]HOW AM I HEARING HER THEN?!
+Spike: Oh whatever. Let's just open this door!
+<<else>>
+Spring: Who's there?
+Spike: Nobody!
+Spring: Oh okay!
+<<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 21520,11160
+__PrivCrochet_tags: 
+title: newton spring shop tip jar crinoid
+---
+<<if visitedSelf() == 1>>
+Newton: [camshake]What are you trying to do!?
+-> Tip
+    Newton: Woah there! That's a pretty big tip!
+    Newton: You might as well buy something from me directly!
+-> Tricks
+    Newton: What?!
+    Newton: How could anyone possibly trick me by giving me a lot of money?
+<<else>>
+Newton: Hand it to me! The jar doesn't deserve it!
+<<endif>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 21800,11160
+__PrivCrochet_tags: 
+title: newton spring shop tip jar crinoid big
+---
+Try as you might, the big star doesn't fit in the little jar.
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 19560,11440
+__PrivCrochet_tags: 
+title: treehouse entrance hanging stars crinoid
+---
+You feel the stars cowering in fear.
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 18720,11440
+__PrivCrochet_tags: 
+title: treehouse entrance hanging star fallen crinoid
+---
+You feel the fallen star laughing at you.
+===

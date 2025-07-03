@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_mouse_squeak",
+  "audioGroupId":{
+    "name":"audiogroup_sfx",
+    "path":"audiogroups/audiogroup_sfx",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":3.197347,
+  "name":"snd_mouse_squeak",
+  "parent":{
+    "name":"SFX",
+    "path":"folders/Sounds/SFX.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_mouse_squeak.ogg",
+  "type":0,
+  "volume":1.0,
+}

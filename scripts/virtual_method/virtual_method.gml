@@ -1,0 +1,3 @@
+function virtual_method()
+{
+}

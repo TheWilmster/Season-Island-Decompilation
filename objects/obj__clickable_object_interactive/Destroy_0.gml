@@ -1,0 +1,1 @@
+obj_room_data_manager.push_destroyed_instance(self);

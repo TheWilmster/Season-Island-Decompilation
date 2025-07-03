@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_tornado_watch",
+  "audioGroupId":{
+    "name":"audiogroup_music",
+    "path":"audiogroups/audiogroup_music",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":25.945963,
+  "name":"snd_tornado_watch",
+  "parent":{
+    "name":"Music",
+    "path":"folders/Sounds/Music.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_tornado_watch.ogg",
+  "type":0,
+  "volume":1.0,
+}

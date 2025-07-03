@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"event_flag_get",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"event_flag_get",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

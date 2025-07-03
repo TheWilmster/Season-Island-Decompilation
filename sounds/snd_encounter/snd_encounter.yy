@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_encounter",
+  "audioGroupId":{
+    "name":"audiogroup_sfx",
+    "path":"audiogroups/audiogroup_sfx",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":434.9443,
+  "name":"snd_encounter",
+  "parent":{
+    "name":"SFX",
+    "path":"folders/Sounds/SFX.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_encounter.ogg",
+  "type":0,
+  "volume":1.0,
+}

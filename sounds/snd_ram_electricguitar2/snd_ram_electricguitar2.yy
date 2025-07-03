@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_ram_electricguitar2",
+  "audioGroupId":{
+    "name":"audiogroup_sfx",
+    "path":"audiogroups/audiogroup_sfx",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":2.5263493,
+  "name":"snd_ram_electricguitar2",
+  "parent":{
+    "name":"SFX",
+    "path":"folders/Sounds/SFX.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_ram_electricguitar2.ogg",
+  "type":0,
+  "volume":1.0,
+}
